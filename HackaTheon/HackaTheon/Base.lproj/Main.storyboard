@@ -24,16 +24,46 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmpImg" translatesAutoresizingMaskIntoConstraints="NO" id="4Lb-HW-bbh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeY-zR-jRX">
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKa-ha-NLZ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="M9n-k7-LrV">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Nn3-kz-mcb">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSe-AD-cpB">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gdj-MU-tZ3">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Śpiewniki" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCt-DP-0jV">
+                                                        <rect key="frame" x="253" y="45" width="94" height="27"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="KCt-DP-0jV" firstAttribute="centerX" secondItem="gdj-MU-tZ3" secondAttribute="centerX" id="BWl-lU-YNB"/>
+                                                    <constraint firstItem="KCt-DP-0jV" firstAttribute="top" secondItem="gdj-MU-tZ3" secondAttribute="top" constant="45" id="yV1-CK-HKy"/>
+                                                </constraints>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="light"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="mSe-AD-cpB" secondAttribute="trailing" id="PYT-fo-u8s"/>
+                                        <constraint firstItem="mSe-AD-cpB" firstAttribute="top" secondItem="Nn3-kz-mcb" secondAttribute="top" id="ZZQ-Pp-zsA"/>
+                                        <constraint firstAttribute="bottom" secondItem="mSe-AD-cpB" secondAttribute="bottom" id="k4z-JS-h7E"/>
+                                        <constraint firstItem="mSe-AD-cpB" firstAttribute="leading" secondItem="Nn3-kz-mcb" secondAttribute="leading" id="kk3-r9-mWo"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jPM-Lg-EgK">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewLayout key="collectionViewLayout" id="7Jf-MU-RLu" customClass="PhoneCardsCollectionViewLayout"/>
                                 <cells>
@@ -149,19 +179,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FeY-zR-jRX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="1Zg-lo-OiP"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FeY-zR-jRX" secondAttribute="bottom" id="C3W-SA-Grt"/>
+                            <constraint firstItem="cKa-ha-NLZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="35Z-BT-8ui"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jPM-Lg-EgK" secondAttribute="bottom" id="E2s-C7-TI9"/>
-                            <constraint firstItem="jPM-Lg-EgK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="GJX-hF-3w7"/>
-                            <constraint firstAttribute="trailing" secondItem="FeY-zR-jRX" secondAttribute="trailing" id="JtS-2W-9wn"/>
-                            <constraint firstItem="FeY-zR-jRX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="agR-av-8Fk"/>
+                            <constraint firstItem="jPM-Lg-EgK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="GJX-hF-3w7"/>
+                            <constraint firstAttribute="trailing" secondItem="cKa-ha-NLZ" secondAttribute="trailing" id="NAF-0D-dMR"/>
+                            <constraint firstItem="cKa-ha-NLZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tsx-xK-4gV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cKa-ha-NLZ" secondAttribute="bottom" id="Zhs-iV-y6F"/>
                             <constraint firstItem="4Lb-HW-bbh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hAG-XW-D1C"/>
                             <constraint firstItem="4Lb-HW-bbh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="iVH-ZI-1dJ"/>
+                            <constraint firstItem="cKa-ha-NLZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="236" id="meg-41-ecE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Lb-HW-bbh" secondAttribute="bottom" id="oRh-Ve-3Sm"/>
                             <constraint firstItem="jPM-Lg-EgK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yUL-OW-V1F"/>
                             <constraint firstAttribute="trailing" secondItem="jPM-Lg-EgK" secondAttribute="trailing" id="yuU-mH-ZbD"/>
                             <constraint firstAttribute="trailing" secondItem="4Lb-HW-bbh" secondAttribute="trailing" id="zJK-yk-cCi"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="meg-41-ecE"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="jPM-Lg-EgK" id="rrU-tE-6ic"/>
@@ -330,7 +366,7 @@ Nieba i ziemie Twórca jest zamkniony...</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HQw-Q0-F7R">
                                 <rect key="frame" x="20" y="64" width="580" height="536"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">1. Witaj pokarmie w którym niezmierzony
+                                <string key="text">1. Witaj pokarmie w którym niezmierzony
 Nieba i ziemie Twórca jest zamkniony
 Witaj napoju zupełnie gaszący
 Umysł pragnący.
@@ -427,7 +463,7 @@ Choć nad nim stoi.
 5. Witaj jedyna serc ludzkich radości
 Witaj strapionych wszelka łaskawości
 Ciebie dziś moje łzy słodkie szukają
-K Tobie wołają.</mutableString>
+K Tobie wołają.</string>
                                 <color key="textColor" red="0.078400985054347783" green="0.078400985054347783" blue="0.078400985054347783" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
