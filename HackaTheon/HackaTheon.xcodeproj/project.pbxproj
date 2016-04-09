@@ -28,6 +28,7 @@
 		90D851E81CB97F160089E151 /* ChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851E71CB97F160089E151 /* ChordsViewController.swift */; };
 		90D851EA1CB97F270089E151 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851E91CB97F270089E151 /* NotesViewController.swift */; };
 		90D851EC1CB983D70089E151 /* ChordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851EB1CB983D70089E151 /* ChordTableViewCell.swift */; };
+		90D851EE1CB989CC0089E151 /* CardTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851ED1CB989CC0089E151 /* CardTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		90D851E71CB97F160089E151 /* ChordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChordsViewController.swift; path = Code/Controllers/ChordsViewController.swift; sourceTree = "<group>"; };
 		90D851E91CB97F270089E151 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesViewController.swift; path = Code/Controllers/NotesViewController.swift; sourceTree = "<group>"; };
 		90D851EB1CB983D70089E151 /* ChordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChordTableViewCell.swift; path = Code/Views/Cells/ChordTableViewCell.swift; sourceTree = "<group>"; };
+		90D851ED1CB989CC0089E151 /* CardTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTransition.swift; path = Code/Utils/Transitions/CardTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				90946F641CB956B600DB2D14 /* Layouts */,
+				90D851EF1CB989CF0089E151 /* Transitions */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -197,6 +200,14 @@
 				90D851D61CB9714D0089E151 /* Detector */,
 			);
 			name = Vendor;
+			sourceTree = "<group>";
+		};
+		90D851EF1CB989CF0089E151 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				90D851ED1CB989CC0089E151 /* CardTransition.swift */,
+			);
+			name = Transitions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +299,7 @@
 				90D851E51CB9714D0089E151 /* UIDevice+ExifOrientation.m in Sources */,
 				90946F581CB929A600DB2D14 /* ListViewController.swift in Sources */,
 				90D851E21CB9714D0089E151 /* DSFacialGestureAggregator.m in Sources */,
+				90D851EE1CB989CC0089E151 /* CardTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

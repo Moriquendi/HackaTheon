@@ -18,6 +18,19 @@ UITableViewDelegate {
     
     let kSongSegue = "kSongSegue"
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.initialize()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.initialize()
+    }
+    
+    func initialize() {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

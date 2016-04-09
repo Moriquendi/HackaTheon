@@ -10,7 +10,8 @@ import UIKit
 
 class BooksViewController: UIViewController,
 UICollectionViewDataSource,
-UICollectionViewDelegate {
+UICollectionViewDelegate,
+UIViewControllerTransitioningDelegate {
     
     let SegueListDetails = "kListDetailsSegue"
     var lists: Array<List> = []
@@ -69,15 +70,42 @@ UICollectionViewDelegate {
     // MARK: UIViewController
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        
         if (segue.identifier == SegueListDetails) {
             let details = sender as! Dictionary<String, AnyObject>
             let list = details["item"] as! List
             let navVC = segue.destinationViewController as! UINavigationController
             let listVC = navVC.viewControllers.first as! ListViewController
             listVC.list = list
+            
+            navVC.transitioningDelegate = self
+            navVC.modalPresentationStyle = UIModalPresentationStyle.Custom
         }
     }
 
+    // MARK: UIViewControllerTransitionDelegate
+    
+    func animationControllerForPresentedController(presented: UIViewController,
+                                                   presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let transition = CardTransition()
+        transition.presenting = true
+        
+        let visibleCell = self.collectionView.visibleCells().first!
+        transition.startCardFrame = self.collectionView.convertRect(visibleCell.frame, toView: nil)
+        
+        return transition
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let transition = CardTransition()
+        transition.presenting = false
+        
+        let visibleCell = self.collectionView.visibleCells().first!
+        transition.startCardFrame = self.collectionView.convertRect(visibleCell.frame, toView: nil)
+        
+        return transition
+    }
     
 }
 
