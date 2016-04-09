@@ -432,12 +432,22 @@ K Tobie wołają.</mutableString>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSO-hf-CRZ">
+                                <rect key="frame" x="500" y="84" width="80" height="140"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="RcL-0j-jkM"/>
+                                    <constraint firstAttribute="width" constant="80" id="RnD-TE-nzr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93900730298913038" green="0.93900730298913038" blue="0.93900730298913038" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="HQw-Q0-F7R" secondAttribute="trailing" id="eXg-jx-EN2"/>
                             <constraint firstItem="HQw-Q0-F7R" firstAttribute="leading" secondItem="UOg-Qz-gaB" secondAttribute="leadingMargin" id="jce-Gk-2fh"/>
                             <constraint firstItem="HQw-Q0-F7R" firstAttribute="top" secondItem="qTY-tS-bOj" secondAttribute="bottom" id="qGJ-7H-MEq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aSO-hf-CRZ" secondAttribute="trailing" id="tOK-Pl-h3c"/>
+                            <constraint firstItem="aSO-hf-CRZ" firstAttribute="top" secondItem="qTY-tS-bOj" secondAttribute="bottom" constant="20" id="uk2-Jc-hG9"/>
                             <constraint firstItem="iea-7q-xMl" firstAttribute="top" secondItem="HQw-Q0-F7R" secondAttribute="bottom" id="vCX-a6-PP7"/>
                         </constraints>
                     </view>
@@ -446,6 +456,7 @@ K Tobie wołają.</mutableString>
                     </navigationItem>
                     <connections>
                         <outlet property="additionalMenuOptions" destination="fyu-Mw-gME" id="d1r-yj-pMl"/>
+                        <outlet property="cameraPreviewView" destination="aSO-hf-CRZ" id="eBN-Fe-DfV"/>
                         <outlet property="textView" destination="HQw-Q0-F7R" id="Vm0-ft-SUa"/>
                     </connections>
                 </viewController>
