@@ -84,6 +84,9 @@
                             <constraint firstAttribute="trailing" secondItem="jPM-Lg-EgK" secondAttribute="trailing" id="yuU-mH-ZbD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="5FY-qj-lMV" kind="show" identifier="kListDetailsSegue" id="Aml-wo-crI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -101,7 +104,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SS3-XO-NW9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SS3-XO-NW9">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -114,10 +117,11 @@
                             <constraint firstItem="SS3-XO-NW9" firstAttribute="leading" secondItem="VFW-WE-2fJ" secondAttribute="leading" id="nVo-Kk-oUx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dMU-DN-s9z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHu-c7-1c9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="239" y="455"/>
+            <point key="canvasLocation" x="1051" y="455"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Glh-4C-soQ">
@@ -150,7 +154,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UdW-jd-Ert" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="915" y="455"/>
+            <point key="canvasLocation" x="1727" y="455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mmv-GQ-OUe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5FY-qj-lMV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KLf-aH-Lp3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Hua-SL-yeq" kind="relationship" relationship="rootViewController" id="unu-ji-OsR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qvq-9e-nu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="455"/>
         </scene>
     </scenes>
     <resources>

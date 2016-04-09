@@ -12,6 +12,8 @@ class BooksViewController: UIViewController,
 UICollectionViewDataSource,
 UICollectionViewDelegate {
     
+    let SegueListDetails = "kListDetailsSegue"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +32,23 @@ UICollectionViewDelegate {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
         
         return cell
+    }
+    
+    // MARK: UICollectionViewDelegate
+    
+    func collectionView(collectionView: UICollectionView,
+                        didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier(SegueListDetails, sender: ["item" : indexPath])
+    }
+    
+
+    // MARK: UIViewController
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == SegueListDetails) {
+            let details = sender as! Dictionary<String, AnyObject>
+            print(details)
+        }
     }
     
 }
