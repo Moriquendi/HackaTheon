@@ -11,7 +11,8 @@ import UIKit
 class List: NSObject {
     
     var title: String?
-    var songs: Array<Song>?
-    
+    var songs: Array<Song> = []
+
+    var image: UIImage?
 
 }

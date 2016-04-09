@@ -11,10 +11,12 @@ import UIKit
 class SongViewController: UIViewController,
 DSFacialDetectorDelegate {
 
+    var song: Song?
     let facialGesturesDetector = DSFacialGesturesDetector()
     @IBOutlet weak var textView: UITextView!
     @IBOutlet var additionalMenuOptions: UIView!
     @IBOutlet var cameraPreviewView: UIView!
+    
     var faceGesturesEnabled = false {
         didSet {
             cameraPreviewView.hidden = !faceGesturesEnabled
@@ -34,6 +36,8 @@ DSFacialDetectorDelegate {
         self.cameraPreviewView.hidden = true
         self.textView.addSubview(self.additionalMenuOptions)
         self.textView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0)
+        
+        self.textView.text = song?.text
     }
     
     override func viewDidLayoutSubviews() {

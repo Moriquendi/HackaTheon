@@ -14,6 +14,8 @@ class Song: NSObject {
     var chords: String?
     var author: String?
     
+    var text: String?
+    
     var notesURL: NSURL?
     var audioURL: NSURL?
     

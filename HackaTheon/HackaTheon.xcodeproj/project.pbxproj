@@ -29,6 +29,7 @@
 		90D851EA1CB97F270089E151 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851E91CB97F270089E151 /* NotesViewController.swift */; };
 		90D851EC1CB983D70089E151 /* ChordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851EB1CB983D70089E151 /* ChordTableViewCell.swift */; };
 		90D851EE1CB989CC0089E151 /* CardTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851ED1CB989CC0089E151 /* CardTransition.swift */; };
+		90D851F21CB9A75C0089E151 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851F11CB9A75C0089E151 /* SongTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		90D851E91CB97F270089E151 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesViewController.swift; path = Code/Controllers/NotesViewController.swift; sourceTree = "<group>"; };
 		90D851EB1CB983D70089E151 /* ChordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChordTableViewCell.swift; path = Code/Views/Cells/ChordTableViewCell.swift; sourceTree = "<group>"; };
 		90D851ED1CB989CC0089E151 /* CardTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTransition.swift; path = Code/Utils/Transitions/CardTransition.swift; sourceTree = "<group>"; };
+		90D851F11CB9A75C0089E151 /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongTableViewCell.swift; path = Code/Views/Cells/SongTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				90946F5A1CB92B2800DB2D14 /* ListCollectionViewCell.swift */,
 				90D851EB1CB983D70089E151 /* ChordTableViewCell.swift */,
+				90D851F11CB9A75C0089E151 /* SongTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				90946F561CB927E500DB2D14 /* Group.swift in Sources */,
 				90D851EC1CB983D70089E151 /* ChordTableViewCell.swift in Sources */,
 				90946F541CB927CE00DB2D14 /* List.swift in Sources */,
+				90D851F21CB9A75C0089E151 /* SongTableViewCell.swift in Sources */,
 				90D851EA1CB97F270089E151 /* NotesViewController.swift in Sources */,
 				90D851D51CB96BD80089E151 /* SongViewController.swift in Sources */,
 				90946F3B1CB9103700DB2D14 /* AppDelegate.swift in Sources */,

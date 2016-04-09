@@ -96,7 +96,7 @@
                                                                         <constraint firstAttribute="height" constant="1" id="tcw-PE-XLO"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08M-Xh-hz8">
+                                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08M-Xh-hz8">
                                                                     <rect key="frame" x="0.0" y="96" width="279" height="44"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="44" id="IgU-c0-gJb"/>
@@ -167,7 +167,9 @@
                                         <connections>
                                             <outlet property="containerView" destination="qO8-nL-WhK" id="cq7-WW-FCH"/>
                                             <outlet property="imageView" destination="77t-wa-f6Q" id="9Bx-K8-y0l"/>
+                                            <outlet property="songsCountLabel" destination="pDe-ZY-Tlj" id="jK5-HK-YVf"/>
                                             <outlet property="subCardContainer" destination="ibJ-mY-fxC" id="46U-gB-A3r"/>
+                                            <outlet property="titleLabel" destination="AHd-LJ-qnw" id="dnN-g0-1Me"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -264,7 +266,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="aWY-u5-xTB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="aWY-u5-xTB" customClass="SongTableViewCell" customModule="HackaTheon" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="203" width="600" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aWY-u5-xTB" id="e0S-6G-aOb">
@@ -319,6 +321,10 @@ Nieba i ziemie Twórca jest zamkniony...</string>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="synopsisLabel" destination="Raf-WU-K6q" id="vU1-cs-tWq"/>
+                                            <outlet property="titleLabel" destination="X2v-vb-kNI" id="qWD-um-eUD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -343,7 +349,10 @@ Nieba i ziemie Twórca jest zamkniony...</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="headerImageView" destination="MSJ-7u-43a" id="Gvk-bb-vgq"/>
+                        <outlet property="songsCountLabel" destination="jSf-TG-SqO" id="QpY-HS-ajE"/>
                         <outlet property="tableView" destination="SS3-XO-NW9" id="DEi-aM-Juh"/>
+                        <outlet property="titleLabel" destination="QGa-wx-7t5" id="cpQ-Kj-fgp"/>
                         <segue destination="AjB-EF-AlI" kind="show" identifier="kSongSegue" id="cSH-wa-Dgi"/>
                     </connections>
                 </viewController>

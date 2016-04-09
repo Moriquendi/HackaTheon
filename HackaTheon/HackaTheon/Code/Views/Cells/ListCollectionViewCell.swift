@@ -13,6 +13,8 @@ class ListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var subCardContainer: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var songsCountLabel: UILabel!
     
     // MARK: UIView
     
