@@ -30,7 +30,62 @@
 		90D851EC1CB983D70089E151 /* ChordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851EB1CB983D70089E151 /* ChordTableViewCell.swift */; };
 		90D851EE1CB989CC0089E151 /* CardTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851ED1CB989CC0089E151 /* CardTransition.swift */; };
 		90D851F21CB9A75C0089E151 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851F11CB9A75C0089E151 /* SongTableViewCell.swift */; };
+		90D851F41CB9ACE20089E151 /* KaraokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851F31CB9ACE20089E151 /* KaraokeViewController.swift */; };
+		90D852281CB9B04F0089E151 /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D852231CB9AF810089E151 /* LTMorphingLabel.framework */; };
+		90D852291CB9B04F0089E151 /* LTMorphingLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90D852231CB9AF810089E151 /* LTMorphingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90D852201CB9AF810089E151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90D8521A1CB9AF810089E151 /* LTMorphingLabelDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D74AD96E195171E7009A2ACD;
+			remoteInfo = LTMorphingLabelDemo;
+		};
+		90D852221CB9AF810089E151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90D8521A1CB9AF810089E151 /* LTMorphingLabelDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D7D4B01F1A5E87D50087F83D;
+			remoteInfo = LTMorphingLabel;
+		};
+		90D852241CB9AF810089E151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90D8521A1CB9AF810089E151 /* LTMorphingLabelDemo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D7934DC61A63AF1100AE04CE;
+			remoteInfo = LTMorphingLabelTests;
+		};
+		90D852261CB9AF8E0089E151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90D8521A1CB9AF810089E151 /* LTMorphingLabelDemo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D7D4B01E1A5E87D50087F83D;
+			remoteInfo = LTMorphingLabel;
+		};
+		90D8522A1CB9B04F0089E151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90D8521A1CB9AF810089E151 /* LTMorphingLabelDemo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D7D4B01E1A5E87D50087F83D;
+			remoteInfo = LTMorphingLabel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		90D8522C1CB9B04F0089E151 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				90D852291CB9B04F0089E151 /* LTMorphingLabel.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		90946F371CB9103700DB2D14 /* HackaTheon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackaTheon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +120,8 @@
 		90D851EB1CB983D70089E151 /* ChordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChordTableViewCell.swift; path = Code/Views/Cells/ChordTableViewCell.swift; sourceTree = "<group>"; };
 		90D851ED1CB989CC0089E151 /* CardTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTransition.swift; path = Code/Utils/Transitions/CardTransition.swift; sourceTree = "<group>"; };
 		90D851F11CB9A75C0089E151 /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongTableViewCell.swift; path = Code/Views/Cells/SongTableViewCell.swift; sourceTree = "<group>"; };
+		90D851F31CB9ACE20089E151 /* KaraokeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KaraokeViewController.swift; path = Code/Controllers/KaraokeViewController.swift; sourceTree = "<group>"; };
+		90D8521A1CB9AF810089E151 /* LTMorphingLabelDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LTMorphingLabelDemo.xcodeproj; path = Vendor/LTMorphingLabel/LTMorphingLabel/LTMorphingLabelDemo.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D852281CB9B04F0089E151 /* LTMorphingLabel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +197,7 @@
 				90D851D41CB96BD80089E151 /* SongViewController.swift */,
 				90D851E71CB97F160089E151 /* ChordsViewController.swift */,
 				90D851E91CB97F270089E151 /* NotesViewController.swift */,
+				90D851F31CB9ACE20089E151 /* KaraokeViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +259,7 @@
 		90D851E61CB971500089E151 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				90D8521A1CB9AF810089E151 /* LTMorphingLabelDemo.xcodeproj */,
 				90D851D61CB9714D0089E151 /* Detector */,
 			);
 			name = Vendor;
@@ -213,6 +273,16 @@
 			name = Transitions;
 			sourceTree = "<group>";
 		};
+		90D8521B1CB9AF810089E151 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90D852211CB9AF810089E151 /* LTMorphingLabelDemo.app */,
+				90D852231CB9AF810089E151 /* LTMorphingLabel.framework */,
+				90D852251CB9AF810089E151 /* LTMorphingLabelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,10 +293,13 @@
 				90946F331CB9103700DB2D14 /* Sources */,
 				90946F341CB9103700DB2D14 /* Frameworks */,
 				90946F351CB9103700DB2D14 /* Resources */,
+				90D8522C1CB9B04F0089E151 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				90D852271CB9AF8E0089E151 /* PBXTargetDependency */,
+				90D8522B1CB9B04F0089E151 /* PBXTargetDependency */,
 			);
 			name = HackaTheon;
 			productName = HackaTheon;
@@ -259,12 +332,42 @@
 			mainGroup = 90946F2E1CB9103700DB2D14;
 			productRefGroup = 90946F381CB9103700DB2D14 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 90D8521B1CB9AF810089E151 /* Products */;
+					ProjectRef = 90D8521A1CB9AF810089E151 /* LTMorphingLabelDemo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				90946F361CB9103700DB2D14 /* HackaTheon */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		90D852211CB9AF810089E151 /* LTMorphingLabelDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = LTMorphingLabelDemo.app;
+			remoteRef = 90D852201CB9AF810089E151 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		90D852231CB9AF810089E151 /* LTMorphingLabel.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = LTMorphingLabel.framework;
+			remoteRef = 90D852221CB9AF810089E151 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		90D852251CB9AF810089E151 /* LTMorphingLabelTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LTMorphingLabelTests.xctest;
+			remoteRef = 90D852241CB9AF810089E151 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		90946F351CB9103700DB2D14 /* Resources */ = {
@@ -286,6 +389,7 @@
 			files = (
 				90946F501CB927B400DB2D14 /* Song.swift in Sources */,
 				90946F431CB9103700DB2D14 /* HackaTheon.xcdatamodeld in Sources */,
+				90D851F41CB9ACE20089E151 /* KaraokeViewController.swift in Sources */,
 				90D851E41CB9714D0089E151 /* DSFacialGesturesDetector.m in Sources */,
 				90946F5B1CB92B2800DB2D14 /* ListCollectionViewCell.swift in Sources */,
 				90946F3D1CB9103700DB2D14 /* BooksViewController.swift in Sources */,
@@ -308,6 +412,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90D852271CB9AF8E0089E151 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LTMorphingLabel;
+			targetProxy = 90D852261CB9AF8E0089E151 /* PBXContainerItemProxy */;
+		};
+		90D8522B1CB9B04F0089E151 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LTMorphingLabel;
+			targetProxy = 90D8522A1CB9B04F0089E151 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		90946F3E1CB9103700DB2D14 /* Main.storyboard */ = {
@@ -417,6 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HackaTheon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smialko.HackaTheon;
@@ -431,6 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HackaTheon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smialko.HackaTheon;
