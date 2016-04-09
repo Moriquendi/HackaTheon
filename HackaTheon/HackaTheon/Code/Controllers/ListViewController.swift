@@ -8,16 +8,49 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+class ListViewController: UIViewController,
+UITableViewDataSource,
+UITableViewDelegate {
 
     // MARK: UIViewController
     var list: List?
+    
+    let kSongSegue = "kSongSegue"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = list?.title
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == kSongSegue) {
+            
+        }
+    }
+    
+    // MARK: UITableViewDataSource
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell")!
+        
+        return cell
+    }
+    
+    // MARK: UITableViewDelegate
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("kSongSegue", sender: nil)
+    }
+    
+    // MARK: ListViewController
+    
+    @IBAction func didTapCloseButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
 }
