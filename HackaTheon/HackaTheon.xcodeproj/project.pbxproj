@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90946F3B1CB9103700DB2D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90946F3A1CB9103700DB2D14 /* AppDelegate.swift */; };
-		90946F3D1CB9103700DB2D14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90946F3C1CB9103700DB2D14 /* ViewController.swift */; };
+		90946F3D1CB9103700DB2D14 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90946F3C1CB9103700DB2D14 /* BooksViewController.swift */; };
 		90946F401CB9103700DB2D14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90946F3E1CB9103700DB2D14 /* Main.storyboard */; };
 		90946F431CB9103700DB2D14 /* HackaTheon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90946F411CB9103700DB2D14 /* HackaTheon.xcdatamodeld */; };
 		90946F451CB9103700DB2D14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90946F441CB9103700DB2D14 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		90946F371CB9103700DB2D14 /* HackaTheon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackaTheon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90946F3A1CB9103700DB2D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		90946F3C1CB9103700DB2D14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90946F3C1CB9103700DB2D14 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		90946F3F1CB9103700DB2D14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90946F421CB9103700DB2D14 /* HackaTheon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackaTheon.xcdatamodel; sourceTree = "<group>"; };
 		90946F441CB9103700DB2D14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				90946F3A1CB9103700DB2D14 /* AppDelegate.swift */,
-				90946F3C1CB9103700DB2D14 /* ViewController.swift */,
+				90946F3C1CB9103700DB2D14 /* BooksViewController.swift */,
 				90946F3E1CB9103700DB2D14 /* Main.storyboard */,
 				90946F441CB9103700DB2D14 /* Assets.xcassets */,
 				90946F461CB9103700DB2D14 /* LaunchScreen.storyboard */,
@@ -139,7 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90946F431CB9103700DB2D14 /* HackaTheon.xcdatamodeld in Sources */,
-				90946F3D1CB9103700DB2D14 /* ViewController.swift in Sources */,
+				90946F3D1CB9103700DB2D14 /* BooksViewController.swift in Sources */,
 				90946F3B1CB9103700DB2D14 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
