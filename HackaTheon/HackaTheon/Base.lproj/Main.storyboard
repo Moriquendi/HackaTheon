@@ -47,47 +47,62 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="299" height="466"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmpImg" translatesAutoresizingMaskIntoConstraints="NO" id="77t-wa-f6Q">
-                                                            <rect key="frame" x="0.0" y="-1" width="299" height="350"/>
+                                                            <rect key="frame" x="0.0" y="-1" width="299" height="419"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Procesja Palmowa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHd-LJ-qnw">
-                                                            <rect key="frame" x="8" y="357" width="139" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cj0-YE-3Kg">
-                                                            <rect key="frame" x="0.0" y="420" width="299" height="1"/>
-                                                            <color key="backgroundColor" red="0.8368857563405796" green="0.8368857563405796" blue="0.8368857563405796" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibJ-mY-fxC">
+                                                            <rect key="frame" x="10" y="346" width="279" height="110"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Procesja Palmowa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHd-LJ-qnw">
+                                                                    <rect key="frame" x="8" y="8" width="139" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cj0-YE-3Kg">
+                                                                    <rect key="frame" x="0.0" y="65" width="279" height="1"/>
+                                                                    <color key="backgroundColor" red="0.8368857563405796" green="0.8368857563405796" blue="0.8368857563405796" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="tcw-PE-XLO"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08M-Xh-hz8">
+                                                                    <rect key="frame" x="0.0" y="66" width="279" height="44"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="44" id="IgU-c0-gJb"/>
+                                                                    </constraints>
+                                                                    <state key="normal" title="Zobacz Śpiewnik"/>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="1" id="tcw-PE-XLO"/>
+                                                                <constraint firstAttribute="bottom" secondItem="08M-Xh-hz8" secondAttribute="bottom" id="HBK-t7-Pdi"/>
+                                                                <constraint firstItem="AHd-LJ-qnw" firstAttribute="leading" secondItem="ibJ-mY-fxC" secondAttribute="leadingMargin" id="NIg-98-GFT"/>
+                                                                <constraint firstItem="08M-Xh-hz8" firstAttribute="top" secondItem="Cj0-YE-3Kg" secondAttribute="bottom" id="W8R-ub-J1h"/>
+                                                                <constraint firstAttribute="height" constant="110" id="ZeU-JT-Tu3"/>
+                                                                <constraint firstItem="Cj0-YE-3Kg" firstAttribute="leading" secondItem="08M-Xh-hz8" secondAttribute="leading" id="c5S-na-fOd"/>
+                                                                <constraint firstItem="Cj0-YE-3Kg" firstAttribute="trailing" secondItem="08M-Xh-hz8" secondAttribute="trailing" id="geW-3u-pWK"/>
+                                                                <constraint firstItem="AHd-LJ-qnw" firstAttribute="top" secondItem="ibJ-mY-fxC" secondAttribute="topMargin" id="ktR-eS-Mfy"/>
+                                                                <constraint firstItem="08M-Xh-hz8" firstAttribute="leading" secondItem="ibJ-mY-fxC" secondAttribute="leading" id="nkJ-vi-qG0"/>
+                                                                <constraint firstAttribute="trailing" secondItem="08M-Xh-hz8" secondAttribute="trailing" id="yE7-tk-qox"/>
                                                             </constraints>
                                                         </view>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08M-Xh-hz8">
-                                                            <rect key="frame" x="0.0" y="422" width="299" height="44"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="44" id="IgU-c0-gJb"/>
-                                                            </constraints>
-                                                            <state key="normal" title="Zobacz Śpiewnik"/>
-                                                        </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="Cj0-YE-3Kg" firstAttribute="trailing" secondItem="08M-Xh-hz8" secondAttribute="trailing" id="2jc-RO-rvs"/>
+                                                        <constraint firstItem="ibJ-mY-fxC" firstAttribute="leading" secondItem="qO8-nL-WhK" secondAttribute="leading" constant="10" id="9dU-Zk-C07"/>
                                                         <constraint firstItem="77t-wa-f6Q" firstAttribute="leading" secondItem="qO8-nL-WhK" secondAttribute="leading" id="CJx-y9-LhJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ibJ-mY-fxC" secondAttribute="trailing" constant="10" id="EqU-fj-Czv"/>
                                                         <constraint firstItem="77t-wa-f6Q" firstAttribute="top" secondItem="qO8-nL-WhK" secondAttribute="top" constant="-1" id="RLP-So-f3d"/>
-                                                        <constraint firstItem="AHd-LJ-qnw" firstAttribute="leading" secondItem="qO8-nL-WhK" secondAttribute="leadingMargin" id="RTJ-0f-xdO"/>
-                                                        <constraint firstItem="08M-Xh-hz8" firstAttribute="leading" secondItem="qO8-nL-WhK" secondAttribute="leading" id="TL0-ON-KDR"/>
+                                                        <constraint firstItem="ibJ-mY-fxC" firstAttribute="top" secondItem="77t-wa-f6Q" secondAttribute="bottom" constant="-30" id="TmO-m3-lYx"/>
                                                         <constraint firstAttribute="trailing" secondItem="77t-wa-f6Q" secondAttribute="trailing" id="TsI-bj-hE3"/>
                                                         <constraint firstAttribute="bottom" secondItem="77t-wa-f6Q" secondAttribute="bottom" id="VTK-fk-4LR"/>
-                                                        <constraint firstAttribute="bottom" secondItem="08M-Xh-hz8" secondAttribute="bottom" id="d4p-H8-54O"/>
-                                                        <constraint firstItem="Cj0-YE-3Kg" firstAttribute="leading" secondItem="08M-Xh-hz8" secondAttribute="leading" id="iyk-Z9-xSh"/>
-                                                        <constraint firstItem="77t-wa-f6Q" firstAttribute="height" secondItem="qO8-nL-WhK" secondAttribute="height" multiplier="0.75" id="n6G-8n-wo5"/>
-                                                        <constraint firstAttribute="trailing" secondItem="08M-Xh-hz8" secondAttribute="trailing" id="tLS-E3-Y2s"/>
-                                                        <constraint firstItem="AHd-LJ-qnw" firstAttribute="top" secondItem="77t-wa-f6Q" secondAttribute="bottom" constant="8" symbolic="YES" id="ti9-bV-XlF"/>
-                                                        <constraint firstItem="08M-Xh-hz8" firstAttribute="top" secondItem="Cj0-YE-3Kg" secondAttribute="bottom" constant="1" id="wKQ-y8-f25"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ibJ-mY-fxC" secondAttribute="bottom" constant="10" id="dwF-SP-N7Q"/>
+                                                        <constraint firstItem="77t-wa-f6Q" firstAttribute="height" secondItem="qO8-nL-WhK" secondAttribute="height" multiplier="0.9" id="n6G-8n-wo5"/>
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="constraints">
                                                             <exclude reference="VTK-fk-4LR"/>
+                                                            <exclude reference="TmO-m3-lYx"/>
                                                         </mask>
                                                     </variation>
                                                 </view>
@@ -105,6 +120,7 @@
                                         <connections>
                                             <outlet property="containerView" destination="qO8-nL-WhK" id="cq7-WW-FCH"/>
                                             <outlet property="imageView" destination="77t-wa-f6Q" id="9Bx-K8-y0l"/>
+                                            <outlet property="subCardContainer" destination="ibJ-mY-fxC" id="46U-gB-A3r"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
