@@ -25,6 +25,9 @@
 		90D851E31CB9714D0089E151 /* DSFacialGestureCameraCapturer.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D851DC1CB9714D0089E151 /* DSFacialGestureCameraCapturer.m */; };
 		90D851E41CB9714D0089E151 /* DSFacialGesturesDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D851DE1CB9714D0089E151 /* DSFacialGesturesDetector.m */; };
 		90D851E51CB9714D0089E151 /* UIDevice+ExifOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D851E01CB9714D0089E151 /* UIDevice+ExifOrientation.m */; };
+		90D851E81CB97F160089E151 /* ChordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851E71CB97F160089E151 /* ChordsViewController.swift */; };
+		90D851EA1CB97F270089E151 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851E91CB97F270089E151 /* NotesViewController.swift */; };
+		90D851EC1CB983D70089E151 /* ChordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851EB1CB983D70089E151 /* ChordTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		90D851DE1CB9714D0089E151 /* DSFacialGesturesDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFacialGesturesDetector.m; sourceTree = "<group>"; };
 		90D851DF1CB9714D0089E151 /* UIDevice+ExifOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ExifOrientation.h"; sourceTree = "<group>"; };
 		90D851E01CB9714D0089E151 /* UIDevice+ExifOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+ExifOrientation.m"; sourceTree = "<group>"; };
+		90D851E71CB97F160089E151 /* ChordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChordsViewController.swift; path = Code/Controllers/ChordsViewController.swift; sourceTree = "<group>"; };
+		90D851E91CB97F270089E151 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotesViewController.swift; path = Code/Controllers/NotesViewController.swift; sourceTree = "<group>"; };
+		90D851EB1CB983D70089E151 /* ChordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChordTableViewCell.swift; path = Code/Views/Cells/ChordTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +93,8 @@
 		90946F391CB9103700DB2D14 /* HackaTheon */ = {
 			isa = PBXGroup;
 			children = (
-				90D851E61CB971500089E151 /* Vendor */,
 				90946F511CB927B600DB2D14 /* Code */,
+				90D851E61CB971500089E151 /* Vendor */,
 				90946F3E1CB9103700DB2D14 /* Main.storyboard */,
 				90946F441CB9103700DB2D14 /* Assets.xcassets */,
 				90946F461CB9103700DB2D14 /* LaunchScreen.storyboard */,
@@ -127,6 +133,8 @@
 				90946F3C1CB9103700DB2D14 /* BooksViewController.swift */,
 				90946F571CB929A600DB2D14 /* ListViewController.swift */,
 				90D851D41CB96BD80089E151 /* SongViewController.swift */,
+				90D851E71CB97F160089E151 /* ChordsViewController.swift */,
+				90D851E91CB97F270089E151 /* NotesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -143,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				90946F5A1CB92B2800DB2D14 /* ListCollectionViewCell.swift */,
+				90D851EB1CB983D70089E151 /* ChordTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -268,9 +277,12 @@
 				90946F3D1CB9103700DB2D14 /* BooksViewController.swift in Sources */,
 				90D851E31CB9714D0089E151 /* DSFacialGestureCameraCapturer.m in Sources */,
 				90D851D31CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.m in Sources */,
+				90D851E81CB97F160089E151 /* ChordsViewController.swift in Sources */,
 				90D851E11CB9714D0089E151 /* DSFacialGesture.m in Sources */,
 				90946F561CB927E500DB2D14 /* Group.swift in Sources */,
+				90D851EC1CB983D70089E151 /* ChordTableViewCell.swift in Sources */,
 				90946F541CB927CE00DB2D14 /* List.swift in Sources */,
+				90D851EA1CB97F270089E151 /* NotesViewController.swift in Sources */,
 				90D851D51CB96BD80089E151 /* SongViewController.swift in Sources */,
 				90946F3B1CB9103700DB2D14 /* AppDelegate.swift in Sources */,
 				90D851E51CB9714D0089E151 /* UIDevice+ExifOrientation.m in Sources */,

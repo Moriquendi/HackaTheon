@@ -13,6 +13,7 @@ DSFacialDetectorDelegate {
 
     let facialGesturesDetector = DSFacialGesturesDetector()
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet var additionalMenuOptions: UIView!
     
     // MARK: UIViewController
     
@@ -23,6 +24,14 @@ DSFacialDetectorDelegate {
         facialGesturesDetector.cameraPreviewView = nil
         var error: NSError? = nil
         facialGesturesDetector.startDetection(&error)
+        
+        self.textView.addSubview(self.additionalMenuOptions)
+        self.textView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.additionalMenuOptions.frame = CGRectMake(0, -100, self.textView.bounds.size.width, 100)
     }
 
     // MARK: DSFacialDetectorDelegate
