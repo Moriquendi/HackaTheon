@@ -18,6 +18,7 @@
 		90946F561CB927E500DB2D14 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90946F551CB927E500DB2D14 /* Group.swift */; };
 		90946F581CB929A600DB2D14 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90946F571CB929A600DB2D14 /* ListViewController.swift */; };
 		90946F5B1CB92B2800DB2D14 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90946F5A1CB92B2800DB2D14 /* ListCollectionViewCell.swift */; };
+		90D851D31CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D851D21CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		90946F551CB927E500DB2D14 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Group.swift; path = Code/Model/Group.swift; sourceTree = "<group>"; };
 		90946F571CB929A600DB2D14 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = Code/Controllers/ListViewController.swift; sourceTree = "<group>"; };
 		90946F5A1CB92B2800DB2D14 /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListCollectionViewCell.swift; path = Code/Views/Cells/ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		90946F5F1CB956AD00DB2D14 /* HackaTheon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HackaTheon-Bridging-Header.h"; sourceTree = "<group>"; };
+		90D851D11CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneCardsCollectionViewLayout.h; path = Code/Utils/Layouts/PhoneCardsCollectionViewLayout.h; sourceTree = "<group>"; };
+		90D851D21CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneCardsCollectionViewLayout.m; path = Code/Utils/Layouts/PhoneCardsCollectionViewLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				90946F3A1CB9103700DB2D14 /* AppDelegate.swift */,
+				90946F631CB956B200DB2D14 /* Utils */,
 				90946F5C1CB92B2B00DB2D14 /* Views */,
 				90946F591CB929AB00DB2D14 /* Controllers */,
 				90946F521CB927BB00DB2D14 /* Model */,
+				90946F5F1CB956AD00DB2D14 /* HackaTheon-Bridging-Header.h */,
 			);
 			name = Code;
 			sourceTree = "<group>";
@@ -120,6 +126,23 @@
 				90946F5A1CB92B2800DB2D14 /* ListCollectionViewCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		90946F631CB956B200DB2D14 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				90946F641CB956B600DB2D14 /* Layouts */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		90946F641CB956B600DB2D14 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				90D851D11CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.h */,
+				90D851D21CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.m */,
+			);
+			name = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +220,7 @@
 				90946F431CB9103700DB2D14 /* HackaTheon.xcdatamodeld in Sources */,
 				90946F5B1CB92B2800DB2D14 /* ListCollectionViewCell.swift in Sources */,
 				90946F3D1CB9103700DB2D14 /* BooksViewController.swift in Sources */,
+				90D851D31CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.m in Sources */,
 				90946F561CB927E500DB2D14 /* Group.swift in Sources */,
 				90946F541CB927CE00DB2D14 /* List.swift in Sources */,
 				90946F3B1CB9103700DB2D14 /* AppDelegate.swift in Sources */,
@@ -313,10 +337,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HackaTheon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smialko.HackaTheon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HackaTheon/HackaTheon-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -324,10 +351,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HackaTheon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smialko.HackaTheon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HackaTheon/HackaTheon-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -350,6 +379,7 @@
 				90946F4E1CB9103700DB2D14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -15,6 +15,8 @@ UICollectionViewDelegate {
     let SegueListDetails = "kListDetailsSegue"
     var lists: Array<List> = []
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +24,16 @@ UICollectionViewDelegate {
                  List(),
                  List(),
                  List()]
-
+        
+        let layout = collectionView.collectionViewLayout as! PhoneCardsCollectionViewLayout
+        layout.interItemSpace = 30
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        let layout = collectionView.collectionViewLayout as! PhoneCardsCollectionViewLayout
+        layout.itemSize = CGSizeMake(self.view.bounds.size.width - 30, self.view.bounds.size.height - 150)
     }
 
     // MARK: UICollectionViewDataSource
@@ -62,6 +73,7 @@ UICollectionViewDelegate {
             listVC.list = list
         }
     }
+
     
 }
 

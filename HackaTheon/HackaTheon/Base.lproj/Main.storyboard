@@ -31,43 +31,38 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jPM-Lg-EgK">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jPM-Lg-EgK">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="30" minimumInteritemSpacing="30" id="9xs-WS-UkG">
-                                    <size key="itemSize" width="300" height="460"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
+                                <collectionViewLayout key="collectionViewLayout" id="7Jf-MU-RLu" customClass="PhoneCardsCollectionViewLayout"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="QJt-bj-zjQ" customClass="ListCollectionViewCell" customModule="HackaTheon" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="70" width="300" height="460"/>
+                                        <rect key="frame" x="151" y="0.0" width="299" height="466"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="460"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="299" height="466"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qO8-nL-WhK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="460"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="299" height="466"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmpImg" translatesAutoresizingMaskIntoConstraints="NO" id="77t-wa-f6Q">
-                                                            <rect key="frame" x="0.0" y="-1" width="300" height="345"/>
+                                                            <rect key="frame" x="0.0" y="-1" width="299" height="350"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Procesja Palmowa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHd-LJ-qnw">
-                                                            <rect key="frame" x="8" y="352" width="139" height="21"/>
+                                                            <rect key="frame" x="8" y="357" width="139" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cj0-YE-3Kg">
-                                                            <rect key="frame" x="0.0" y="414" width="300" height="1"/>
+                                                            <rect key="frame" x="0.0" y="420" width="299" height="1"/>
                                                             <color key="backgroundColor" red="0.8368857563405796" green="0.8368857563405796" blue="0.8368857563405796" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="tcw-PE-XLO"/>
                                                             </constraints>
                                                         </view>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08M-Xh-hz8">
-                                                            <rect key="frame" x="0.0" y="416" width="300" height="44"/>
+                                                            <rect key="frame" x="0.0" y="422" width="299" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="44" id="IgU-c0-gJb"/>
                                                             </constraints>
@@ -106,6 +101,7 @@
                                             <constraint firstAttribute="trailing" secondItem="qO8-nL-WhK" secondAttribute="trailing" id="ntZ-5B-eaf"/>
                                             <constraint firstItem="qO8-nL-WhK" firstAttribute="top" secondItem="QJt-bj-zjQ" secondAttribute="top" id="yLD-0N-aA4"/>
                                         </constraints>
+                                        <size key="customSize" width="299" height="466"/>
                                         <connections>
                                             <outlet property="containerView" destination="qO8-nL-WhK" id="cq7-WW-FCH"/>
                                             <outlet property="imageView" destination="77t-wa-f6Q" id="9Bx-K8-y0l"/>
@@ -135,6 +131,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="jPM-Lg-EgK" id="rrU-tE-6ic"/>
                         <segue destination="5FY-qj-lMV" kind="show" identifier="kListDetailsSegue" id="Aml-wo-crI"/>
                     </connections>
                 </viewController>
@@ -208,7 +205,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Witaj Pokarmie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2v-vb-kNI">
                                                     <rect key="frame" x="8" y="8" width="123" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Raf-WU-K6q">
