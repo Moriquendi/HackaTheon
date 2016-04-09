@@ -306,6 +306,7 @@ Nieba i ziemie Twórca jest zamkniony...</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="SS3-XO-NW9" id="DEi-aM-Juh"/>
                         <segue destination="AjB-EF-AlI" kind="show" identifier="kSongSegue" id="cSH-wa-Dgi"/>
                     </connections>
                 </viewController>

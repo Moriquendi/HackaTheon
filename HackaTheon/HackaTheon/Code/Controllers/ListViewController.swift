@@ -14,6 +14,7 @@ UITableViewDelegate {
 
     // MARK: UIViewController
     var list: List?
+    @IBOutlet weak var tableView: UITableView!
     
     let kSongSegue = "kSongSegue"
     
@@ -21,6 +22,14 @@ UITableViewDelegate {
         super.viewDidLoad()
         
         self.title = list?.title
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRowAtIndexPath(indexPath, animated: animated)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
