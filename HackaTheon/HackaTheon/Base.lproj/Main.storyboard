@@ -451,9 +451,7 @@ K Tobie wołają.</mutableString>
                             <constraint firstItem="iea-7q-xMl" firstAttribute="top" secondItem="HQw-Q0-F7R" secondAttribute="bottom" id="vCX-a6-PP7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Piosenka" id="mLM-1K-W4S">
-                        <barButtonItem key="rightBarButtonItem" title="Chords" id="hUQ-k0-ZVJ"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Piosenka" id="mLM-1K-W4S"/>
                     <connections>
                         <outlet property="additionalMenuOptions" destination="fyu-Mw-gME" id="d1r-yj-pMl"/>
                         <outlet property="cameraPreviewView" destination="aSO-hf-CRZ" id="eBN-Fe-DfV"/>

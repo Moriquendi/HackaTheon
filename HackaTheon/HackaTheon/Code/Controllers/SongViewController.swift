@@ -26,7 +26,6 @@ DSFacialDetectorDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         facialGesturesDetector.delegate = self
         facialGesturesDetector.cameraPreviewView = self.cameraPreviewView
         var error: NSError? = nil
