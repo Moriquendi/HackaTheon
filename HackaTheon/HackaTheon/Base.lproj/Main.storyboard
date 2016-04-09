@@ -483,9 +483,16 @@ K Tobie wołają.</mutableString>
                                 <segue destination="FIf-WV-ONF" kind="show" id="4fR-xi-UwY"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byo-hR-kT5">
+                            <rect key="frame" x="213" y="18" width="32" height="30"/>
+                            <state key="normal" title="Auto"/>
+                            <connections>
+                                <action selector="didTapToggleFaceGestures:" destination="AjB-EF-AlI" eventType="touchUpInside" id="Fwm-RJ-aAJ"/>
+                            </connections>
+                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bC-Cp-KSp">
                             <rect key="frame" x="148" y="8" width="50" height="50"/>
-                            <state key="normal" title="Play Audio" image="noteIcon"/>
+                            <state key="normal" image="playIcon"/>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -498,11 +505,13 @@ K Tobie wołają.</mutableString>
                         <constraint firstItem="3bC-Cp-KSp" firstAttribute="leading" secondItem="AYH-Xy-tTD" secondAttribute="trailing" constant="20" id="QnZ-UR-B24"/>
                         <constraint firstItem="AYH-Xy-tTD" firstAttribute="leading" secondItem="XRV-AY-pb6" secondAttribute="trailing" constant="20" id="R6N-vy-Maz"/>
                         <constraint firstItem="3bC-Cp-KSp" firstAttribute="leading" secondItem="AYH-Xy-tTD" secondAttribute="leading" id="SaQ-Zs-Eip"/>
+                        <constraint firstItem="byo-hR-kT5" firstAttribute="centerY" secondItem="3bC-Cp-KSp" secondAttribute="centerY" id="SmJ-U5-Kqh"/>
                         <constraint firstItem="3bC-Cp-KSp" firstAttribute="height" secondItem="AYH-Xy-tTD" secondAttribute="height" id="Zto-I9-Gnc"/>
                         <constraint firstItem="3bC-Cp-KSp" firstAttribute="width" secondItem="AYH-Xy-tTD" secondAttribute="width" id="eNh-sg-y6k"/>
                         <constraint firstItem="AYH-Xy-tTD" firstAttribute="width" secondItem="XRV-AY-pb6" secondAttribute="width" id="iTB-7h-bLD"/>
                         <constraint firstItem="XRV-AY-pb6" firstAttribute="top" secondItem="fyu-Mw-gME" secondAttribute="topMargin" id="o8j-fi-pAU"/>
                         <constraint firstItem="AYH-Xy-tTD" firstAttribute="centerY" secondItem="XRV-AY-pb6" secondAttribute="centerY" id="pSD-CH-AuA"/>
+                        <constraint firstItem="byo-hR-kT5" firstAttribute="leading" secondItem="3bC-Cp-KSp" secondAttribute="trailing" constant="15" id="pcG-ah-rgA"/>
                         <constraint firstItem="AYH-Xy-tTD" firstAttribute="top" secondItem="XRV-AY-pb6" secondAttribute="bottom" constant="8" symbolic="YES" id="pdj-8A-lmX"/>
                         <constraint firstItem="3bC-Cp-KSp" firstAttribute="width" secondItem="AYH-Xy-tTD" secondAttribute="width" id="t7g-XG-sa8"/>
                         <constraint firstAttribute="leadingMargin" secondItem="XRV-AY-pb6" secondAttribute="leading" id="vFW-1x-MvM"/>

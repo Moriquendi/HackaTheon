@@ -15,6 +15,11 @@ DSFacialDetectorDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet var additionalMenuOptions: UIView!
     @IBOutlet var cameraPreviewView: UIView!
+    var faceGesturesEnabled = false {
+        didSet {
+            cameraPreviewView.hidden = !faceGesturesEnabled
+        }
+    }
     
     // MARK: UIViewController
     
@@ -27,6 +32,7 @@ DSFacialDetectorDelegate {
         var error: NSError? = nil
         facialGesturesDetector.startDetection(&error)
         
+        self.cameraPreviewView.hidden = true
         self.textView.addSubview(self.additionalMenuOptions)
         self.textView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0)
     }
@@ -36,6 +42,12 @@ DSFacialDetectorDelegate {
         self.additionalMenuOptions.frame = CGRectMake(0, -100, self.textView.bounds.size.width, 100)
     }
 
+    // MARK:
+    
+    @IBAction func didTapToggleFaceGestures(sender: AnyObject) {
+        self.faceGesturesEnabled = !self.faceGesturesEnabled
+    }
+    
     // MARK: DSFacialDetectorDelegate
 
     func didRegisterFacialGesutreOfType(facialGestureType: GestureType,
@@ -46,9 +58,13 @@ DSFacialDetectorDelegate {
     func didUpdateProgress(progress: Float,
                            forType facialGestureType: GestureType) {
         
+        if (!faceGesturesEnabled) {
+            return
+        }
+        
         switch facialGestureType {
         case .LeftBlink, .RightBlink:
-            if (lastScrollDate.timeIntervalSinceNow < -3.0 &&
+            if (lastScrollDate.timeIntervalSinceNow < -2.0 &&
                 progress > 0.5) {
                 print("Yep \(progress) - \(facialGestureType)")
                 
