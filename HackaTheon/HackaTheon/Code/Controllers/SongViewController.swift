@@ -45,7 +45,13 @@ DSFacialDetectorDelegate {
         self.additionalMenuOptions.frame = CGRectMake(0, -100, self.textView.bounds.size.width, 100)
     }
 
-    // MARK:
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let karaokeVC = segue.destinationViewController as? KaraokeViewController {
+            karaokeVC.song = song
+        }
+    }
+    
+    // MARK: SongViewController
     
     @IBAction func didTapToggleFaceGestures(sender: AnyObject) {
         self.faceGesturesEnabled = !self.faceGesturesEnabled

@@ -12,6 +12,9 @@ import LTMorphingLabel
 class KaraokeViewController: UIViewController {
     
     @IBOutlet weak var textLabel: LTMorphingLabel!
+    
+    var song: Song?
+    var songTextLines: Array<String> = []
     var timer: NSTimer?
     
     // MARK: UIViewController
@@ -19,8 +22,15 @@ class KaraokeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.textLabel.text = "\"\(song!.title!)\""
         self.textLabel.morphingEffect = LTMorphingEffect.Fall
+        songTextLines = song!.text!.componentsSeparatedByString("\n").filter({ (line) -> Bool in
+            if (line.characters.count == 0) {
+                return false
+            }
+            return true
+        })
+        
         timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(KaraokeViewController.changeText), userInfo: self, repeats: true)
     }
     
@@ -28,14 +38,7 @@ class KaraokeViewController: UIViewController {
     
     var index = 0
     func changeText() {
-        
-        let text = ["Nazywam sie Michal",
-                    "Na nazwisko Smialko",
-                    "Jestesmy na HackTheonie",
-                    "Pozdrawiamy wszystkich goraco",
-                    "Hej hej i pa!"]
-        
-        self.textLabel.text = text[index % 5]
+        self.textLabel.text = songTextLines[index % 5]
         index += 1
     }
 
