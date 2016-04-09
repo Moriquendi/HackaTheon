@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="-463" y="455"/>
         </scene>
-        <!--View Controller-->
+        <!--List View Controller-->
         <scene sceneID="Jpp-jZ-1VI">
             <objects>
-                <viewController id="Hua-SL-yeq" sceneMemberID="viewController">
+                <viewController id="Hua-SL-yeq" customClass="ListViewController" customModule="HackaTheon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="giR-gA-jm6"/>
                         <viewControllerLayoutGuide type="bottom" id="YjD-Vt-NCp"/>

@@ -56,7 +56,10 @@ UICollectionViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == SegueListDetails) {
             let details = sender as! Dictionary<String, AnyObject>
-            print(details)
+            let list = details["item"] as! List
+            let navVC = segue.destinationViewController as! UINavigationController
+            let listVC = navVC.viewControllers.first as! ListViewController
+            listVC.list = list
         }
     }
     
