@@ -327,9 +327,83 @@ Nieba i ziemie Twórca jest zamkniony...</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HQw-Q0-F7R">
-                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <rect key="frame" x="20" y="64" width="580" height="536"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <mutableString key="text">1. Witaj pokarmie w którym niezmierzony
+Nieba i ziemie Twórca jest zamkniony
+Witaj napoju zupełnie gaszący
+Umysł pragnący.
+
+2. Witaj krynico wszystkiego dobrego
+Gdy bowiem w sobie masz Boga samego
+Znasz ludziom wszystkie jego wszechmocności
+Niesiesz godności.
+
+3. Witaj z niebiosów manno padająca
+Rozkoszny w sercu naszym smak czyniąca
+Wszystko na świecie co jedno smakuje
+W tym się znajduje.
+
+4. Witaj rozkoszne z ogrodu rajskiego
+Drzewo owocu pełne żywiącego
+Kto cię skosztuje śmierci się nie boi
+Choć nad nim stoi.
+
+5. Witaj jedyna serc ludzkich radości
+Witaj strapionych wszelka łaskawości
+Ciebie dziś moje łzy słodkie szukają
+K Tobie wołają.
+
+1. Witaj pokarmie w którym niezmierzony
+Nieba i ziemie Twórca jest zamkniony
+Witaj napoju zupełnie gaszący
+Umysł pragnący.
+
+2. Witaj krynico wszystkiego dobrego
+Gdy bowiem w sobie masz Boga samego
+Znasz ludziom wszystkie jego wszechmocności
+Niesiesz godności.
+
+3. Witaj z niebiosów manno padająca
+Rozkoszny w sercu naszym smak czyniąca
+Wszystko na świecie co jedno smakuje
+W tym się znajduje.
+
+4. Witaj rozkoszne z ogrodu rajskiego
+Drzewo owocu pełne żywiącego
+Kto cię skosztuje śmierci się nie boi
+Choć nad nim stoi.
+
+5. Witaj jedyna serc ludzkich radości
+Witaj strapionych wszelka łaskawości
+Ciebie dziś moje łzy słodkie szukają
+K Tobie wołają.
+1. Witaj pokarmie w którym niezmierzony
+Nieba i ziemie Twórca jest zamkniony
+Witaj napoju zupełnie gaszący
+Umysł pragnący.
+
+2. Witaj krynico wszystkiego dobrego
+Gdy bowiem w sobie masz Boga samego
+Znasz ludziom wszystkie jego wszechmocności
+Niesiesz godności.
+
+3. Witaj z niebiosów manno padająca
+Rozkoszny w sercu naszym smak czyniąca
+Wszystko na świecie co jedno smakuje
+W tym się znajduje.
+
+4. Witaj rozkoszne z ogrodu rajskiego
+Drzewo owocu pełne żywiącego
+Kto cię skosztuje śmierci się nie boi
+Choć nad nim stoi.
+
+5. Witaj jedyna serc ludzkich radości
+Witaj strapionych wszelka łaskawości
+Ciebie dziś moje łzy słodkie szukają
+K Tobie wołają.
+
+1. Witaj pokarmie w którym niezmierzony
 Nieba i ziemie Twórca jest zamkniony
 Witaj napoju zupełnie gaszący
 Umysł pragnący.
@@ -360,7 +434,7 @@ K Tobie wołają.</mutableString>
                         </subviews>
                         <color key="backgroundColor" red="0.93900730298913038" green="0.93900730298913038" blue="0.93900730298913038" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="HQw-Q0-F7R" secondAttribute="trailing" id="eXg-jx-EN2"/>
+                            <constraint firstAttribute="trailing" secondItem="HQw-Q0-F7R" secondAttribute="trailing" id="eXg-jx-EN2"/>
                             <constraint firstItem="HQw-Q0-F7R" firstAttribute="leading" secondItem="UOg-Qz-gaB" secondAttribute="leadingMargin" id="jce-Gk-2fh"/>
                             <constraint firstItem="HQw-Q0-F7R" firstAttribute="top" secondItem="qTY-tS-bOj" secondAttribute="bottom" id="qGJ-7H-MEq"/>
                             <constraint firstItem="iea-7q-xMl" firstAttribute="top" secondItem="HQw-Q0-F7R" secondAttribute="bottom" id="vCX-a6-PP7"/>
@@ -369,6 +443,9 @@ K Tobie wołają.</mutableString>
                     <navigationItem key="navigationItem" title="Piosenka" id="mLM-1K-W4S">
                         <barButtonItem key="rightBarButtonItem" title="Chords" id="hUQ-k0-ZVJ"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="HQw-Q0-F7R" id="Vm0-ft-SUa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UdW-jd-Ert" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

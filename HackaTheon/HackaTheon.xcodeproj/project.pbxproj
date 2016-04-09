@@ -20,6 +20,11 @@
 		90946F5B1CB92B2800DB2D14 /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90946F5A1CB92B2800DB2D14 /* ListCollectionViewCell.swift */; };
 		90D851D31CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D851D21CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.m */; };
 		90D851D51CB96BD80089E151 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851D41CB96BD80089E151 /* SongViewController.swift */; };
+		90D851E11CB9714D0089E151 /* DSFacialGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D851D81CB9714D0089E151 /* DSFacialGesture.m */; };
+		90D851E21CB9714D0089E151 /* DSFacialGestureAggregator.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D851DA1CB9714D0089E151 /* DSFacialGestureAggregator.m */; };
+		90D851E31CB9714D0089E151 /* DSFacialGestureCameraCapturer.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D851DC1CB9714D0089E151 /* DSFacialGestureCameraCapturer.m */; };
+		90D851E41CB9714D0089E151 /* DSFacialGesturesDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D851DE1CB9714D0089E151 /* DSFacialGesturesDetector.m */; };
+		90D851E51CB9714D0089E151 /* UIDevice+ExifOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D851E01CB9714D0089E151 /* UIDevice+ExifOrientation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,16 @@
 		90D851D11CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneCardsCollectionViewLayout.h; path = Code/Utils/Layouts/PhoneCardsCollectionViewLayout.h; sourceTree = "<group>"; };
 		90D851D21CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneCardsCollectionViewLayout.m; path = Code/Utils/Layouts/PhoneCardsCollectionViewLayout.m; sourceTree = "<group>"; };
 		90D851D41CB96BD80089E151 /* SongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongViewController.swift; path = Code/Controllers/SongViewController.swift; sourceTree = "<group>"; };
+		90D851D71CB9714D0089E151 /* DSFacialGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFacialGesture.h; sourceTree = "<group>"; };
+		90D851D81CB9714D0089E151 /* DSFacialGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFacialGesture.m; sourceTree = "<group>"; };
+		90D851D91CB9714D0089E151 /* DSFacialGestureAggregator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFacialGestureAggregator.h; sourceTree = "<group>"; };
+		90D851DA1CB9714D0089E151 /* DSFacialGestureAggregator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFacialGestureAggregator.m; sourceTree = "<group>"; };
+		90D851DB1CB9714D0089E151 /* DSFacialGestureCameraCapturer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFacialGestureCameraCapturer.h; sourceTree = "<group>"; };
+		90D851DC1CB9714D0089E151 /* DSFacialGestureCameraCapturer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFacialGestureCameraCapturer.m; sourceTree = "<group>"; };
+		90D851DD1CB9714D0089E151 /* DSFacialGesturesDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSFacialGesturesDetector.h; sourceTree = "<group>"; };
+		90D851DE1CB9714D0089E151 /* DSFacialGesturesDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSFacialGesturesDetector.m; sourceTree = "<group>"; };
+		90D851DF1CB9714D0089E151 /* UIDevice+ExifOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ExifOrientation.h"; sourceTree = "<group>"; };
+		90D851E01CB9714D0089E151 /* UIDevice+ExifOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+ExifOrientation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +87,7 @@
 		90946F391CB9103700DB2D14 /* HackaTheon */ = {
 			isa = PBXGroup;
 			children = (
+				90D851E61CB971500089E151 /* Vendor */,
 				90946F511CB927B600DB2D14 /* Code */,
 				90946F3E1CB9103700DB2D14 /* Main.storyboard */,
 				90946F441CB9103700DB2D14 /* Assets.xcassets */,
@@ -148,6 +164,32 @@
 			name = Layouts;
 			sourceTree = "<group>";
 		};
+		90D851D61CB9714D0089E151 /* Detector */ = {
+			isa = PBXGroup;
+			children = (
+				90D851D71CB9714D0089E151 /* DSFacialGesture.h */,
+				90D851D81CB9714D0089E151 /* DSFacialGesture.m */,
+				90D851D91CB9714D0089E151 /* DSFacialGestureAggregator.h */,
+				90D851DA1CB9714D0089E151 /* DSFacialGestureAggregator.m */,
+				90D851DB1CB9714D0089E151 /* DSFacialGestureCameraCapturer.h */,
+				90D851DC1CB9714D0089E151 /* DSFacialGestureCameraCapturer.m */,
+				90D851DD1CB9714D0089E151 /* DSFacialGesturesDetector.h */,
+				90D851DE1CB9714D0089E151 /* DSFacialGesturesDetector.m */,
+				90D851DF1CB9714D0089E151 /* UIDevice+ExifOrientation.h */,
+				90D851E01CB9714D0089E151 /* UIDevice+ExifOrientation.m */,
+			);
+			name = Detector;
+			path = Vendor/Detector;
+			sourceTree = SOURCE_ROOT;
+		};
+		90D851E61CB971500089E151 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				90D851D61CB9714D0089E151 /* Detector */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,14 +263,19 @@
 			files = (
 				90946F501CB927B400DB2D14 /* Song.swift in Sources */,
 				90946F431CB9103700DB2D14 /* HackaTheon.xcdatamodeld in Sources */,
+				90D851E41CB9714D0089E151 /* DSFacialGesturesDetector.m in Sources */,
 				90946F5B1CB92B2800DB2D14 /* ListCollectionViewCell.swift in Sources */,
 				90946F3D1CB9103700DB2D14 /* BooksViewController.swift in Sources */,
+				90D851E31CB9714D0089E151 /* DSFacialGestureCameraCapturer.m in Sources */,
 				90D851D31CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.m in Sources */,
+				90D851E11CB9714D0089E151 /* DSFacialGesture.m in Sources */,
 				90946F561CB927E500DB2D14 /* Group.swift in Sources */,
 				90946F541CB927CE00DB2D14 /* List.swift in Sources */,
 				90D851D51CB96BD80089E151 /* SongViewController.swift in Sources */,
 				90946F3B1CB9103700DB2D14 /* AppDelegate.swift in Sources */,
+				90D851E51CB9714D0089E151 /* UIDevice+ExifOrientation.m in Sources */,
 				90946F581CB929A600DB2D14 /* ListViewController.swift in Sources */,
+				90D851E21CB9714D0089E151 /* DSFacialGestureAggregator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
