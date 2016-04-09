@@ -35,6 +35,10 @@ UICollectionViewDelegate {
         let layout = collectionView.collectionViewLayout as! PhoneCardsCollectionViewLayout
         layout.itemSize = CGSizeMake(self.view.bounds.size.width - 30, self.view.bounds.size.height - 150)
     }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
+    }
 
     // MARK: UICollectionViewDataSource
     

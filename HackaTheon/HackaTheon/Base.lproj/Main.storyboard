@@ -47,42 +47,58 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="299" height="466"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmpImg" translatesAutoresizingMaskIntoConstraints="NO" id="77t-wa-f6Q">
-                                                            <rect key="frame" x="0.0" y="-1" width="299" height="419"/>
+                                                            <rect key="frame" x="0.0" y="-2" width="299" height="419"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         </imageView>
-                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibJ-mY-fxC">
-                                                            <rect key="frame" x="10" y="346" width="279" height="110"/>
+                                                        <view clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibJ-mY-fxC">
+                                                            <rect key="frame" x="10" y="316" width="279" height="140"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Procesja Palmowa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHd-LJ-qnw">
-                                                                    <rect key="frame" x="8" y="8" width="139" height="21"/>
+                                                                    <rect key="frame" x="15" y="15" width="139" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cj0-YE-3Kg">
-                                                                    <rect key="frame" x="0.0" y="65" width="279" height="1"/>
+                                                                    <rect key="frame" x="0.0" y="95" width="279" height="1"/>
                                                                     <color key="backgroundColor" red="0.8368857563405796" green="0.8368857563405796" blue="0.8368857563405796" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="1" id="tcw-PE-XLO"/>
                                                                     </constraints>
                                                                 </view>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08M-Xh-hz8">
-                                                                    <rect key="frame" x="0.0" y="66" width="279" height="44"/>
+                                                                    <rect key="frame" x="0.0" y="96" width="279" height="44"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="44" id="IgU-c0-gJb"/>
                                                                     </constraints>
                                                                     <state key="normal" title="Zobacz Śpiewnik"/>
                                                                 </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIOSENEK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwL-dm-w0x">
+                                                                    <rect key="frame" x="15" y="46" width="59" height="15"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDe-ZY-Tlj">
+                                                                    <rect key="frame" x="15" y="61" width="21" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
+                                                                <constraint firstItem="pDe-ZY-Tlj" firstAttribute="top" secondItem="rwL-dm-w0x" secondAttribute="bottom" id="A0s-XS-vFO"/>
+                                                                <constraint firstItem="pDe-ZY-Tlj" firstAttribute="leading" secondItem="rwL-dm-w0x" secondAttribute="leading" id="EPF-WD-Azq"/>
                                                                 <constraint firstAttribute="bottom" secondItem="08M-Xh-hz8" secondAttribute="bottom" id="HBK-t7-Pdi"/>
-                                                                <constraint firstItem="AHd-LJ-qnw" firstAttribute="leading" secondItem="ibJ-mY-fxC" secondAttribute="leadingMargin" id="NIg-98-GFT"/>
+                                                                <constraint firstItem="AHd-LJ-qnw" firstAttribute="leading" secondItem="ibJ-mY-fxC" secondAttribute="leading" constant="15" id="NIg-98-GFT"/>
                                                                 <constraint firstItem="08M-Xh-hz8" firstAttribute="top" secondItem="Cj0-YE-3Kg" secondAttribute="bottom" id="W8R-ub-J1h"/>
-                                                                <constraint firstAttribute="height" constant="110" id="ZeU-JT-Tu3"/>
+                                                                <constraint firstAttribute="height" constant="140" id="ZeU-JT-Tu3"/>
                                                                 <constraint firstItem="Cj0-YE-3Kg" firstAttribute="leading" secondItem="08M-Xh-hz8" secondAttribute="leading" id="c5S-na-fOd"/>
                                                                 <constraint firstItem="Cj0-YE-3Kg" firstAttribute="trailing" secondItem="08M-Xh-hz8" secondAttribute="trailing" id="geW-3u-pWK"/>
-                                                                <constraint firstItem="AHd-LJ-qnw" firstAttribute="top" secondItem="ibJ-mY-fxC" secondAttribute="topMargin" id="ktR-eS-Mfy"/>
+                                                                <constraint firstItem="AHd-LJ-qnw" firstAttribute="top" secondItem="ibJ-mY-fxC" secondAttribute="top" constant="15" id="ktR-eS-Mfy"/>
+                                                                <constraint firstItem="rwL-dm-w0x" firstAttribute="top" secondItem="AHd-LJ-qnw" secondAttribute="bottom" constant="10" id="mwL-8o-gQ6"/>
                                                                 <constraint firstItem="08M-Xh-hz8" firstAttribute="leading" secondItem="ibJ-mY-fxC" secondAttribute="leading" id="nkJ-vi-qG0"/>
+                                                                <constraint firstItem="rwL-dm-w0x" firstAttribute="leading" secondItem="AHd-LJ-qnw" secondAttribute="leading" id="pJL-pZ-4Pr"/>
                                                                 <constraint firstAttribute="trailing" secondItem="08M-Xh-hz8" secondAttribute="trailing" id="yE7-tk-qox"/>
                                                             </constraints>
                                                         </view>
@@ -92,7 +108,7 @@
                                                         <constraint firstItem="ibJ-mY-fxC" firstAttribute="leading" secondItem="qO8-nL-WhK" secondAttribute="leading" constant="10" id="9dU-Zk-C07"/>
                                                         <constraint firstItem="77t-wa-f6Q" firstAttribute="leading" secondItem="qO8-nL-WhK" secondAttribute="leading" id="CJx-y9-LhJ"/>
                                                         <constraint firstAttribute="trailing" secondItem="ibJ-mY-fxC" secondAttribute="trailing" constant="10" id="EqU-fj-Czv"/>
-                                                        <constraint firstItem="77t-wa-f6Q" firstAttribute="top" secondItem="qO8-nL-WhK" secondAttribute="top" constant="-1" id="RLP-So-f3d"/>
+                                                        <constraint firstItem="77t-wa-f6Q" firstAttribute="top" secondItem="qO8-nL-WhK" secondAttribute="top" constant="-2" id="RLP-So-f3d"/>
                                                         <constraint firstItem="ibJ-mY-fxC" firstAttribute="top" secondItem="77t-wa-f6Q" secondAttribute="bottom" constant="-30" id="TmO-m3-lYx"/>
                                                         <constraint firstAttribute="trailing" secondItem="77t-wa-f6Q" secondAttribute="trailing" id="TsI-bj-hE3"/>
                                                         <constraint firstAttribute="bottom" secondItem="77t-wa-f6Q" secondAttribute="bottom" id="VTK-fk-4LR"/>
@@ -169,13 +185,13 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SS3-XO-NW9">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="FdJ-Pk-jV4">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="175"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tmpImg" translatesAutoresizingMaskIntoConstraints="NO" id="MSJ-7u-43a">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="175"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Procesja Palmowa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGa-wx-7t5">
                                             <rect key="frame" x="414" y="8" width="178" height="27"/>
@@ -184,13 +200,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Piosenek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cw1-fK-hrQ">
-                                            <rect key="frame" x="522" y="120" width="70" height="21"/>
+                                            <rect key="frame" x="522" y="146" width="70" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSf-TG-SqO">
-                                            <rect key="frame" x="571" y="99" width="21" height="21"/>
+                                            <rect key="frame" x="571" y="125" width="21" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -212,23 +228,22 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="aWY-u5-xTB">
-                                        <rect key="frame" x="0.0" y="177" width="600" height="90"/>
+                                        <rect key="frame" x="0.0" y="203" width="600" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aWY-u5-xTB" id="e0S-6G-aOb">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Witaj Pokarmie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2v-vb-kNI">
-                                                    <rect key="frame" x="8" y="8" width="123" height="21"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <rect key="frame" x="20" y="8" width="114" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Raf-WU-K6q">
-                                                    <rect key="frame" x="8" y="37" width="584" height="43"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Raf-WU-K6q">
+                                                    <rect key="frame" x="20" y="37" width="222" height="29"/>
                                                     <string key="text">Witaj Pokarmie, w którym niezmierzony
-Nieba i ziemie Twórca jest zamkniony,
-Witaj napoju zupełnie gaszący...</string>
+Nieba i ziemie Twórca jest zamkniony...</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -250,8 +265,10 @@ Witaj napoju zupełnie gaszący...</string>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="2pZ-xc-xMg" secondAttribute="trailing" id="4Mq-Ag-LUO"/>
                                                 <constraint firstItem="Raf-WU-K6q" firstAttribute="leading" secondItem="X2v-vb-kNI" secondAttribute="leading" id="6tv-HU-Joo"/>
+                                                <constraint firstItem="2pZ-xc-xMg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Raf-WU-K6q" secondAttribute="trailing" id="7aM-JW-LXj"/>
+                                                <constraint firstItem="2pZ-xc-xMg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Raf-WU-K6q" secondAttribute="trailing" id="93l-Dg-ze4"/>
                                                 <constraint firstItem="Raf-WU-K6q" firstAttribute="top" secondItem="X2v-vb-kNI" secondAttribute="bottom" constant="8" id="Eke-q1-wrW"/>
-                                                <constraint firstItem="X2v-vb-kNI" firstAttribute="leading" secondItem="e0S-6G-aOb" secondAttribute="leadingMargin" id="Sss-8f-uem"/>
+                                                <constraint firstItem="X2v-vb-kNI" firstAttribute="leading" secondItem="e0S-6G-aOb" secondAttribute="leading" constant="20" id="Sss-8f-uem"/>
                                                 <constraint firstItem="X2v-vb-kNI" firstAttribute="leading" secondItem="e0S-6G-aOb" secondAttribute="leading" id="Uyf-n0-PTh"/>
                                                 <constraint firstItem="X2v-vb-kNI" firstAttribute="top" secondItem="e0S-6G-aOb" secondAttribute="topMargin" id="WWg-ay-4SQ"/>
                                                 <constraint firstItem="2pZ-xc-xMg" firstAttribute="centerY" secondItem="e0S-6G-aOb" secondAttribute="centerY" id="giO-Fz-kyR"/>
@@ -260,6 +277,8 @@ Witaj napoju zupełnie gaszący...</string>
                                             <variation key="default">
                                                 <mask key="constraints">
                                                     <exclude reference="Uyf-n0-PTh"/>
+                                                    <exclude reference="nNb-ic-hrf"/>
+                                                    <exclude reference="7aM-JW-LXj"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -294,10 +313,10 @@ Witaj napoju zupełnie gaszący...</string>
             </objects>
             <point key="canvasLocation" x="1051" y="455"/>
         </scene>
-        <!--View Controller-->
+        <!--Piosenka-->
         <scene sceneID="Glh-4C-soQ">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="AjB-EF-AlI" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="AjB-EF-AlI" customClass="SongViewController" customModule="HackaTheon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qTY-tS-bOj"/>
                         <viewControllerLayoutGuide type="bottom" id="iea-7q-xMl"/>
@@ -306,15 +325,39 @@ Witaj napoju zupełnie gaszący...</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HQw-Q0-F7R">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HQw-Q0-F7R">
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">1. Witaj pokarmie w którym niezmierzony
+Nieba i ziemie Twórca jest zamkniony
+Witaj napoju zupełnie gaszący
+Umysł pragnący.
+
+2. Witaj krynico wszystkiego dobrego
+Gdy bowiem w sobie masz Boga samego
+Znasz ludziom wszystkie jego wszechmocności
+Niesiesz godności.
+
+3. Witaj z niebiosów manno padająca
+Rozkoszny w sercu naszym smak czyniąca
+Wszystko na świecie co jedno smakuje
+W tym się znajduje.
+
+4. Witaj rozkoszne z ogrodu rajskiego
+Drzewo owocu pełne żywiącego
+Kto cię skosztuje śmierci się nie boi
+Choć nad nim stoi.
+
+5. Witaj jedyna serc ludzkich radości
+Witaj strapionych wszelka łaskawości
+Ciebie dziś moje łzy słodkie szukają
+K Tobie wołają.</mutableString>
+                                <color key="textColor" red="0.078400985054347783" green="0.078400985054347783" blue="0.078400985054347783" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93900730298913038" green="0.93900730298913038" blue="0.93900730298913038" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="HQw-Q0-F7R" secondAttribute="trailing" id="eXg-jx-EN2"/>
                             <constraint firstItem="HQw-Q0-F7R" firstAttribute="leading" secondItem="UOg-Qz-gaB" secondAttribute="leadingMargin" id="jce-Gk-2fh"/>
@@ -322,6 +365,9 @@ Witaj napoju zupełnie gaszący...</string>
                             <constraint firstItem="iea-7q-xMl" firstAttribute="top" secondItem="HQw-Q0-F7R" secondAttribute="bottom" id="vCX-a6-PP7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Piosenka" id="mLM-1K-W4S">
+                        <barButtonItem key="rightBarButtonItem" title="Chords" id="hUQ-k0-ZVJ"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UdW-jd-Ert" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
