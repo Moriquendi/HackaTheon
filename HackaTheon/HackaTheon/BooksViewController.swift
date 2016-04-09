@@ -13,9 +13,15 @@ UICollectionViewDataSource,
 UICollectionViewDelegate {
     
     let SegueListDetails = "kListDetailsSegue"
+    var lists: Array<List> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lists = [List(),
+                 List(),
+                 List(),
+                 List()]
 
     }
 
@@ -23,13 +29,15 @@ UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return lists.count
     }
     
     func collectionView(collectionView: UICollectionView,
                         cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
+        let list = lists[indexPath.item]
+        print(list)
         
         return cell
     }
@@ -38,7 +46,8 @@ UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView,
                         didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier(SegueListDetails, sender: ["item" : indexPath])
+        let list = lists[indexPath.item]
+        self.performSegueWithIdentifier(SegueListDetails, sender: ["item" : list])
     }
     
 
