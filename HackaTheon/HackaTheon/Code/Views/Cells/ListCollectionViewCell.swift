@@ -24,6 +24,10 @@ class ListCollectionViewCell: UICollectionViewCell {
     
     func initialize() {
         containerView.layer.cornerRadius = 7
+        
+        self.layer.shadowColor = UIColor(white: 0.1, alpha: 1).CGColor
+        self.layer.shadowRadius = 10
+        self.layer.masksToBounds = false
     }
     
 }
