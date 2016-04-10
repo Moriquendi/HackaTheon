@@ -17,6 +17,7 @@ GroupsPickerDelegate {
     let SegueListDetails = "kListDetailsSegue"
     let kGroupsSegue = "kGroupsSegue"
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
     var lists: Array<List> = []
     var groups: Array<Group> = []
     var session: NSURLSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
@@ -44,25 +45,34 @@ GroupsPickerDelegate {
         gaudete.title = "Gaudete"
         gaudete.text = "Gaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nTempus ad est gratiae hoc quod optabamus\nCarmina laetitiae devote redamus\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nDeus homo factus est natura mirante\nMundus renovatus est a Christo regnante\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nEzechielis porta clausa per transitur\nUnde lux est orta salus invenitur\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nErgo nostro cantio psallat jam in lustro\nBenedicat domino salus regi nostro\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nTempus ad est gratiae hoc quod optabamus\nCarmina laetitiae devote redamus\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nDeus homo factus est natura mirante\nMundus renovatus est a Christo regnante\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nEzechielis porta clausa per transitur\nUnde lux est orta salus invenitur\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nErgo nostro cantio psallat jam in lustro\nBenedicat domino salus regi nostro\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n"
         
+        let sdmSong = Song()
+        sdmSong.title = "Błogosławieni Miłosierni"
+        sdmSong.text = "Wznoszę swe oczy ku górom skąd przyjdzie mi pomoc,\nPomoc od Pana, wszak Bogiem On miłosiernym jest.\nKiedy zbłądzimy sam szuka nas, by w swe ramiona wziąć,\nRany uleczyć krwią swoich ran, nowe życie tchnąć.\n\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\n\nGdyby nam Pan nie odpuścił win, któż ostać by się mógł,\nLecz On przebacza, przeto i my czyńmy jak nasz Bóg.\n\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\n\nPan Syna krwią zmazał wszelki dług, \nSyn z grobu żywy wstał,\nPanem jest Jezus, mówi w nas Duch,\nNiech to widzi świat.\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\n\nWięc odrzuć lęk i wiernym bądź,\nSwe troski Panu złóż \nI ufaj bo zmartwychwstał \nI wciąż żyje Pan, twój Bóg.\n\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią. /x2\nWznoszę swe oczy ku górom skąd przyjdzie mi pomoc,\nPomoc od Pana, wszak Bogiem On miłosiernym jest.\nKiedy zbłądzimy sam szuka nas, by w swe ramiona wziąć,\nRany uleczyć krwią swoich ran, nowe życie tchnąć.\n\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\n\nGdyby nam Pan nie odpuścił win, któż ostać by się mógł,\nLecz On przebacza, przeto i my czyńmy jak nasz Bóg.\n\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\n\nPan Syna krwią zmazał wszelki dług, \nSyn z grobu żywy wstał,\nPanem jest Jezus, mówi w nas Duch,\nNiech to widzi świat.\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\n\nWięc odrzuć lęk i wiernym bądź,\nSwe troski Panu złóż \nI ufaj bo zmartwychwstał \nI wciąż żyje Pan, twój Bóg.\n\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią.\nBłogosławieni miłosierni,\nAlbowiem oni miłosierdzia dostąpią. /x2\n"
+        
         let list = List()
         list.title = "Procesja Palmowa"
-        list.songs = [song, gaudete, song, song, gaudete, song]
+        list.songs = [song, gaudete, sdmSong, song, gaudete, sdmSong]
         list.image = UIImage(named: "tmpImg")
         
         let majowkaList = List()
         majowkaList.title = "Majówka"
-        majowkaList.songs = [song, gaudete, song, song, gaudete, song]
+        majowkaList.songs = [song, gaudete, sdmSong, song, gaudete, sdmSong]
         majowkaList.image = UIImage(named: "tmpGory")
         
         let sylwList = List()
         sylwList.title = "Sylwester Beta"
-        sylwList.songs = [song, gaudete, song, song, gaudete, song]
+        sylwList.songs = [song, gaudete, sdmSong, song, gaudete, sdmSong]
         sylwList.image = UIImage(named: "tmpSylw")
+        
+        let niedzList = List()
+        niedzList.title = "Roraty"
+        niedzList.songs = [song, gaudete, sdmSong, song, gaudete, sdmSong]
+        niedzList.image = UIImage(named: "niedziele")
         
         lists = [list,
                  majowkaList,
                  sylwList,
-                 list]
+                 niedzList]
         
         self.collectionView.reloadData()
     }
@@ -286,6 +296,16 @@ GroupsPickerDelegate {
     
     func didPickGroup(group: Group) {
         print("Picked group")
+    }
+    
+    
+    // MARK
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let cell = self.collectionView.visibleCells().first as! ListCollectionViewCell
+        backgroundImageView.image = cell.imageView.image
+        
+        
     }
     
 }

@@ -216,6 +216,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="4Lb-HW-bbh" id="AtL-Tz-1Ho"/>
                         <outlet property="collectionView" destination="jPM-Lg-EgK" id="rrU-tE-6ic"/>
                         <segue destination="5FY-qj-lMV" kind="show" identifier="kListDetailsSegue" id="Aml-wo-crI"/>
                     </connections>
