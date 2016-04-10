@@ -35,6 +35,8 @@
 		90D852291CB9B04F0089E151 /* LTMorphingLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90D852231CB9AF810089E151 /* LTMorphingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90D8522E1CB9C1E50089E151 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D8522D1CB9C1E50089E151 /* Chord.swift */; };
 		90D852301CB9CEF40089E151 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D8522F1CB9CEF40089E151 /* AVFoundation.framework */; };
+		90D852321CBA31EC0089E151 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D852311CBA31EC0089E151 /* GroupTableViewCell.swift */; };
+		90D852341CBA32380089E151 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D852331CBA32380089E151 /* GroupsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +128,8 @@
 		90D8521A1CB9AF810089E151 /* LTMorphingLabelDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LTMorphingLabelDemo.xcodeproj; path = Vendor/LTMorphingLabel/LTMorphingLabel/LTMorphingLabelDemo.xcodeproj; sourceTree = SOURCE_ROOT; };
 		90D8522D1CB9C1E50089E151 /* Chord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chord.swift; path = Code/Model/Chord.swift; sourceTree = "<group>"; };
 		90D8522F1CB9CEF40089E151 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		90D852311CBA31EC0089E151 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupTableViewCell.swift; path = Code/Views/Cells/GroupTableViewCell.swift; sourceTree = "<group>"; };
+		90D852331CBA32380089E151 /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupsViewController.swift; path = Code/Controllers/GroupsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,7 @@
 				90D851E71CB97F160089E151 /* ChordsViewController.swift */,
 				90D851E91CB97F270089E151 /* NotesViewController.swift */,
 				90D851F31CB9ACE20089E151 /* KaraokeViewController.swift */,
+				90D852331CBA32380089E151 /* GroupsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				90946F5A1CB92B2800DB2D14 /* ListCollectionViewCell.swift */,
 				90D851EB1CB983D70089E151 /* ChordTableViewCell.swift */,
 				90D851F11CB9A75C0089E151 /* SongTableViewCell.swift */,
+				90D852311CBA31EC0089E151 /* GroupTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -404,6 +410,7 @@
 				90D851E31CB9714D0089E151 /* DSFacialGestureCameraCapturer.m in Sources */,
 				90D851D31CB95FDF0089E151 /* PhoneCardsCollectionViewLayout.m in Sources */,
 				90D851E81CB97F160089E151 /* ChordsViewController.swift in Sources */,
+				90D852321CBA31EC0089E151 /* GroupTableViewCell.swift in Sources */,
 				90D851E11CB9714D0089E151 /* DSFacialGesture.m in Sources */,
 				90946F561CB927E500DB2D14 /* Group.swift in Sources */,
 				90D851EC1CB983D70089E151 /* ChordTableViewCell.swift in Sources */,
@@ -413,6 +420,7 @@
 				90D851D51CB96BD80089E151 /* SongViewController.swift in Sources */,
 				90946F3B1CB9103700DB2D14 /* AppDelegate.swift in Sources */,
 				90D851E51CB9714D0089E151 /* UIDevice+ExifOrientation.m in Sources */,
+				90D852341CBA32380089E151 /* GroupsViewController.swift in Sources */,
 				90946F581CB929A600DB2D14 /* ListViewController.swift in Sources */,
 				90D851E21CB9714D0089E151 /* DSFacialGestureAggregator.m in Sources */,
 				90D851EE1CB989CC0089E151 /* CardTransition.swift in Sources */,

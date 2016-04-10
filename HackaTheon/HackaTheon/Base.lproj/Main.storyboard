@@ -42,9 +42,18 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GG-WZ-URe">
+                                                        <rect key="frame" x="8" y="44" width="50" height="30"/>
+                                                        <state key="normal" title="Groups"/>
+                                                        <connections>
+                                                            <segue destination="GWR-KR-grY" kind="show" identifier="kGroupsSegue" id="7BV-fn-9pM"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="6GG-WZ-URe" firstAttribute="leading" secondItem="gdj-MU-tZ3" secondAttribute="leadingMargin" id="5Yc-Ud-M23"/>
                                                     <constraint firstItem="KCt-DP-0jV" firstAttribute="centerX" secondItem="gdj-MU-tZ3" secondAttribute="centerX" id="BWl-lU-YNB"/>
+                                                    <constraint firstItem="6GG-WZ-URe" firstAttribute="centerY" secondItem="KCt-DP-0jV" secondAttribute="centerY" id="LHe-3R-YBv"/>
                                                     <constraint firstItem="KCt-DP-0jV" firstAttribute="top" secondItem="gdj-MU-tZ3" secondAttribute="top" constant="45" id="yV1-CK-HKy"/>
                                                 </constraints>
                                             </view>
@@ -209,6 +218,94 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-463" y="455"/>
+        </scene>
+        <!--Grupy-->
+        <scene sceneID="AHh-Jc-oYS">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="tVN-S7-a39" customClass="GroupsViewController" customModule="HackaTheon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XSv-OR-ws2"/>
+                        <viewControllerLayoutGuide type="bottom" id="gU1-Xa-noa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ByQ-nZ-rXu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uxs-Ux-TJG">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="5rp-8M-K1S" customClass="GroupTableViewCell" customModule="HackaTheon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5rp-8M-K1S" id="TCF-re-PXM">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beczkaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="4fI-dp-EIN">
+                                                    <rect key="frame" x="8" y="8" width="63" height="63"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="4fI-dp-EIN" secondAttribute="height" multiplier="1:1" id="2rx-G9-KVK"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beczka - Duszpasterstwo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6R-ca-kPZ">
+                                                    <rect key="frame" x="79" y="29" width="196" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="K6R-ca-kPZ" firstAttribute="centerY" secondItem="4fI-dp-EIN" secondAttribute="centerY" id="0zj-ia-cCm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4fI-dp-EIN" secondAttribute="bottom" id="3Tm-74-eZj"/>
+                                                <constraint firstItem="4fI-dp-EIN" firstAttribute="leading" secondItem="TCF-re-PXM" secondAttribute="leadingMargin" id="aHO-GU-Hi6"/>
+                                                <constraint firstItem="K6R-ca-kPZ" firstAttribute="leading" secondItem="4fI-dp-EIN" secondAttribute="trailing" constant="8" symbolic="YES" id="bVe-uG-KP4"/>
+                                                <constraint firstItem="4fI-dp-EIN" firstAttribute="top" secondItem="TCF-re-PXM" secondAttribute="topMargin" id="hOw-Dq-tEw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="avatarImageView" destination="4fI-dp-EIN" id="tzU-Wj-ZZT"/>
+                                            <outlet property="nameLabel" destination="K6R-ca-kPZ" id="6Yh-3k-xVn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tVN-S7-a39" id="prz-GS-WRh"/>
+                                    <outlet property="delegate" destination="tVN-S7-a39" id="qfw-RI-OW0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uxs-Ux-TJG" firstAttribute="top" secondItem="XSv-OR-ws2" secondAttribute="bottom" id="09a-Hc-U5q"/>
+                            <constraint firstAttribute="trailing" secondItem="uxs-Ux-TJG" secondAttribute="trailing" id="2WQ-gU-dd8"/>
+                            <constraint firstItem="gU1-Xa-noa" firstAttribute="top" secondItem="uxs-Ux-TJG" secondAttribute="bottom" id="78k-M1-Hck"/>
+                            <constraint firstItem="uxs-Ux-TJG" firstAttribute="leading" secondItem="ByQ-nZ-rXu" secondAttribute="leadingMargin" id="GDY-C9-NpO"/>
+                            <constraint firstItem="gU1-Xa-noa" firstAttribute="top" secondItem="uxs-Ux-TJG" secondAttribute="bottom" id="dFV-VT-3mf"/>
+                            <constraint firstItem="uxs-Ux-TJG" firstAttribute="top" secondItem="XSv-OR-ws2" secondAttribute="bottom" id="lKZ-Wx-rcW"/>
+                            <constraint firstItem="uxs-Ux-TJG" firstAttribute="leading" secondItem="ByQ-nZ-rXu" secondAttribute="leading" id="mmP-TF-oU0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uxs-Ux-TJG" secondAttribute="trailing" id="tl6-Z4-kiS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="09a-Hc-U5q"/>
+                                <exclude reference="GDY-C9-NpO"/>
+                                <exclude reference="tl6-Z4-kiS"/>
+                                <exclude reference="78k-M1-Hck"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Grupy" id="bqr-8d-tR5">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="3wd-7s-3qC">
+                            <connections>
+                                <action selector="didTapClouse:" destination="tVN-S7-a39" id="6qk-Fb-3Ps"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rrg-Bf-UkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="1203"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="Jpp-jZ-1VI">
@@ -675,7 +772,7 @@ K Tobie wołają.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5P-3e-RYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1727" y="1181"/>
+            <point key="canvasLocation" x="2539" y="1181"/>
         </scene>
         <!--Chords View Controller-->
         <scene sceneID="xXy-4M-YWW">
@@ -763,7 +860,7 @@ K Tobie wołają.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fn9-GQ-ZLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2491" y="833"/>
+            <point key="canvasLocation" x="3303" y="833"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mmv-GQ-OUe">
@@ -783,9 +880,28 @@ K Tobie wołają.</string>
             </objects>
             <point key="canvasLocation" x="239" y="455"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gqP-wz-3ZZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GWR-KR-grY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HOe-Wq-xig">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tVN-S7-a39" kind="relationship" relationship="rootViewController" id="TTU-tK-s6G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xb0-eo-NRH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-483" y="1203"/>
+        </scene>
     </scenes>
     <resources>
         <image name="DChord" width="94" height="133"/>
+        <image name="beczkaLogo" width="420" height="294"/>
         <image name="chordIcon" width="48" height="48"/>
         <image name="faceIcon" width="48" height="48"/>
         <image name="karaokeIcon" width="48" height="48"/>

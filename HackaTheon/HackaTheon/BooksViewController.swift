@@ -11,9 +11,12 @@ import UIKit
 class BooksViewController: UIViewController,
 UICollectionViewDataSource,
 UICollectionViewDelegate,
-UIViewControllerTransitioningDelegate {
+UIViewControllerTransitioningDelegate,
+GroupsPickerDelegate {
     
     let SegueListDetails = "kListDetailsSegue"
+    let kGroupsSegue = "kGroupsSegue"
+    
     var lists: Array<List> = []
     var session: NSURLSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     
@@ -80,7 +83,6 @@ UIViewControllerTransitioningDelegate {
             }
             }.resume()
     }
-    
     
     func listsFromDict(dict: Dictionary<String, AnyObject>) -> [List] {
         var allLists: [List] = []
@@ -184,6 +186,12 @@ UIViewControllerTransitioningDelegate {
             navVC.transitioningDelegate = self
             navVC.modalPresentationStyle = UIModalPresentationStyle.Custom
         }
+        else if (segue.identifier == kGroupsSegue) {
+            let navVC = segue.destinationViewController as! UINavigationController
+            let groupsVC = navVC.viewControllers.first as! GroupsViewController
+            groupsVC.groups = [Group(), Group(), Group(),Group()]
+            groupsVC.delegate = self
+        }
     }
 
     // MARK: UIViewControllerTransitionDelegate
@@ -207,6 +215,12 @@ UIViewControllerTransitioningDelegate {
         transition.startCardFrame = self.collectionView.convertRect(visibleCell.frame, toView: nil)
         
         return transition
+    }
+
+    // MARK: GroupsPickerDelegate
+    
+    func didPickGroup(group: Group) {
+        print("Picked group")
     }
     
 }
