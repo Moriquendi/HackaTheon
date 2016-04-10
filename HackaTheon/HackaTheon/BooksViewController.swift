@@ -31,18 +31,35 @@ GroupsPickerDelegate {
         song.text = "1. Witaj pokarmie w którym niezmierzony\nNieba i ziemie Twórca jest zamkniony\nWitaj napoju zupełnie gaszący\nUmysł pragnący.\n\n2. Witaj krynico wszystkiego dobrego\nGdy bowiem w sobie masz Boga samego\nZnasz\nludziom wszystkie jego wszechmocności\nNiesiesz godności.\n\n3. Witaj z niebiosów manno padająca\nRozkoszny w sercu naszym smak czyniąca\nWszystko na świecie co jedno smakuje\nW tym się znajduje.\n\n4. Witaj rozkoszne z ogrodu rajskiego\nDrzewo owocu pełne żywiącego\nKto cię skosztuje śmierci się nie boi\nChoć nad nim stoi.\n\n5. Witaj jedyna serc ludzkich radości\nWitaj strapionych wszelka łaskawości\nCiebie dziś moje łzy słodkie szukają\nK Tobie wołają.\n1. Witaj pokarmie w którym niezmierzony\nNieba i ziemie Twórca jest zamkniony\nWitaj napoju zupełnie gaszący\nUmysł pragnący.\n\n2. Witaj krynico wszystkiego dobrego\nGdy bowiem w sobie masz Boga samego\nZnasz\nludziom wszystkie jego wszechmocności\nNiesiesz godności.\n\n3. Witaj z niebiosów manno padająca\nRozkoszny w sercu naszym smak czyniąca\nWszystko na świecie co jedno smakuje\nW tym się znajduje.\n\n4. Witaj rozkoszne z ogrodu rajskiego\nDrzewo owocu pełne żywiącego\nKto cię skosztuje śmierci się nie boi\nChoć nad nim stoi.\n\n5. Witaj jedyna serc ludzkich radości\nWitaj strapionych wszelka łaskawości\nCiebie dziś moje łzy słodkie szukają\nK Tobie wołają.\n1. Witaj pokarmie w którym niezmierzony\nNieba i ziemie Twórca jest zamkniony\nWitaj napoju zupełnie gaszący\nUmysł pragnący.\n\n2. Witaj krynico wszystkiego dobrego\nGdy bowiem w sobie masz Boga samego\nZnasz\nludziom wszystkie jego wszechmocności\nNiesiesz godności.\n\n3. Witaj z niebiosów manno padająca\nRozkoszny w sercu naszym smak czyniąca\nWszystko na świecie co jedno smakuje\nW tym się znajduje.\n\n4. Witaj rozkoszne z ogrodu rajskiego\nDrzewo owocu pełne żywiącego\nKto cię skosztuje śmierci się nie boi\nChoć nad nim stoi.\n\n5. Witaj jedyna serc ludzkich radości\nWitaj strapionych wszelka łaskawości\nCiebie dziś moje łzy słodkie szukają\nK Tobie wołają.\nBoom."
     
         
+        let gaudete = Song()
+        gaudete.title = "Gaudete"
+        gaudete.text = "Gaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nTempus ad est gratiae hoc quod optabamus\nCarmina laetitiae devote redamus\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nDeus homo factus est natura mirante\nMundus renovatus est a Christo regnante\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nEzechielis porta clausa per transitur\nUnde lux est orta salus invenitur\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nErgo nostro cantio psallat jam in lustro\nBenedicat domino salus regi nostro\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nTempus ad est gratiae hoc quod optabamus\nCarmina laetitiae devote redamus\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nDeus homo factus est natura mirante\nMundus renovatus est a Christo regnante\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nEzechielis porta clausa per transitur\nUnde lux est orta salus invenitur\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n\nErgo nostro cantio psallat jam in lustro\nBenedicat domino salus regi nostro\n\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\nGaudete, gaudete Christus est natus\nEx Maria virgine gaudete\n"
+        
         let list = List()
         list.title = "Procesja Palmowa"
-        list.songs = [song, song, song]
+        list.songs = [song, gaudete, song, song, gaudete, song]
         list.image = UIImage(named: "tmpImg")
         
+        let majowkaList = List()
+        majowkaList.title = "Majówka"
+        majowkaList.songs = [song, gaudete, song, song, gaudete, song]
+        majowkaList.image = UIImage(named: "tmpGory")
+        
+        let sylwList = List()
+        sylwList.title = "Sylwester Beta"
+        sylwList.songs = [song, gaudete, song, song, gaudete, song]
+        sylwList.image = UIImage(named: "tmpSylw")
+        
         lists = [list,
-                 list,
-                 list,
+                 majowkaList,
+                 sylwList,
                  list]
         
         let layout = collectionView.collectionViewLayout as! PhoneCardsCollectionViewLayout
         layout.interItemSpace = 30
+        
+      
+        return
         
         let listEndpoint = "list"
         let songsEndpoint = "song"
@@ -74,6 +91,7 @@ GroupsPickerDelegate {
                 })
             }
         }
+ 
     }
     
     func groupsFromDict(groupsArray: [[String : AnyObject]]) -> [Group] {
