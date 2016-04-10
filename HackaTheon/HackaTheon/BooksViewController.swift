@@ -26,10 +26,19 @@ GroupsPickerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        
+        let layout = collectionView.collectionViewLayout as! PhoneCardsCollectionViewLayout
+        layout.interItemSpace = 30
+        
+        self.switchToLocalContent(self)
+ 
+    }
+    @IBAction func switchToLocalContent(sender: AnyObject) {
         let song = Song()
         song.title = "Witaj Pokarmie"
         song.text = "1. Witaj pokarmie w którym niezmierzony\nNieba i ziemie Twórca jest zamkniony\nWitaj napoju zupełnie gaszący\nUmysł pragnący.\n\n2. Witaj krynico wszystkiego dobrego\nGdy bowiem w sobie masz Boga samego\nZnasz\nludziom wszystkie jego wszechmocności\nNiesiesz godności.\n\n3. Witaj z niebiosów manno padająca\nRozkoszny w sercu naszym smak czyniąca\nWszystko na świecie co jedno smakuje\nW tym się znajduje.\n\n4. Witaj rozkoszne z ogrodu rajskiego\nDrzewo owocu pełne żywiącego\nKto cię skosztuje śmierci się nie boi\nChoć nad nim stoi.\n\n5. Witaj jedyna serc ludzkich radości\nWitaj strapionych wszelka łaskawości\nCiebie dziś moje łzy słodkie szukają\nK Tobie wołają.\n1. Witaj pokarmie w którym niezmierzony\nNieba i ziemie Twórca jest zamkniony\nWitaj napoju zupełnie gaszący\nUmysł pragnący.\n\n2. Witaj krynico wszystkiego dobrego\nGdy bowiem w sobie masz Boga samego\nZnasz\nludziom wszystkie jego wszechmocności\nNiesiesz godności.\n\n3. Witaj z niebiosów manno padająca\nRozkoszny w sercu naszym smak czyniąca\nWszystko na świecie co jedno smakuje\nW tym się znajduje.\n\n4. Witaj rozkoszne z ogrodu rajskiego\nDrzewo owocu pełne żywiącego\nKto cię skosztuje śmierci się nie boi\nChoć nad nim stoi.\n\n5. Witaj jedyna serc ludzkich radości\nWitaj strapionych wszelka łaskawości\nCiebie dziś moje łzy słodkie szukają\nK Tobie wołają.\n1. Witaj pokarmie w którym niezmierzony\nNieba i ziemie Twórca jest zamkniony\nWitaj napoju zupełnie gaszący\nUmysł pragnący.\n\n2. Witaj krynico wszystkiego dobrego\nGdy bowiem w sobie masz Boga samego\nZnasz\nludziom wszystkie jego wszechmocności\nNiesiesz godności.\n\n3. Witaj z niebiosów manno padająca\nRozkoszny w sercu naszym smak czyniąca\nWszystko na świecie co jedno smakuje\nW tym się znajduje.\n\n4. Witaj rozkoszne z ogrodu rajskiego\nDrzewo owocu pełne żywiącego\nKto cię skosztuje śmierci się nie boi\nChoć nad nim stoi.\n\n5. Witaj jedyna serc ludzkich radości\nWitaj strapionych wszelka łaskawości\nCiebie dziś moje łzy słodkie szukają\nK Tobie wołają.\nBoom."
-    
+        
         
         let gaudete = Song()
         gaudete.title = "Gaudete"
@@ -55,16 +64,16 @@ GroupsPickerDelegate {
                  sylwList,
                  list]
         
-        let layout = collectionView.collectionViewLayout as! PhoneCardsCollectionViewLayout
-        layout.interItemSpace = 30
+        self.collectionView.reloadData()
+    }
+    
+    @IBAction func switchToBackend(sender: AnyObject) {
         
-      
-        return
         
         let listEndpoint = "list"
         let songsEndpoint = "song"
         let groupsEndpoint = "group"
-      
+        
         self.dataForEndpoint(listEndpoint) { (listData) in
             if let listData = listData {
                 self.dataForEndpoint(songsEndpoint, completion: { (songsData) in
@@ -91,8 +100,9 @@ GroupsPickerDelegate {
                 })
             }
         }
- 
     }
+    
+    
     
     func groupsFromDict(groupsArray: [[String : AnyObject]]) -> [Group] {
         var allGroups: [Group] = []

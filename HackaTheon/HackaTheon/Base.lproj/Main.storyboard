@@ -50,12 +50,17 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstItem="6GG-WZ-URe" firstAttribute="leading" secondItem="gdj-MU-tZ3" secondAttribute="leadingMargin" id="5Yc-Ud-M23"/>
                                                     <constraint firstItem="KCt-DP-0jV" firstAttribute="centerX" secondItem="gdj-MU-tZ3" secondAttribute="centerX" id="BWl-lU-YNB"/>
                                                     <constraint firstItem="6GG-WZ-URe" firstAttribute="centerY" secondItem="KCt-DP-0jV" secondAttribute="centerY" id="LHe-3R-YBv"/>
                                                     <constraint firstItem="KCt-DP-0jV" firstAttribute="top" secondItem="gdj-MU-tZ3" secondAttribute="top" constant="45" id="yV1-CK-HKy"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ytB-tp-sbl" appends="YES" id="UbF-hY-CyF"/>
+                                                    <outletCollection property="gestureRecognizers" destination="zfp-XC-Pfp" appends="YES" id="Ism-co-cUd"/>
+                                                </connections>
                                             </view>
                                             <vibrancyEffect>
                                                 <blurEffect style="light"/>
@@ -216,6 +221,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="ytB-tp-sbl">
+                    <connections>
+                        <action selector="switchToLocalContent:" destination="BYZ-38-t0r" id="350-q2-RBy"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="2" id="zfp-XC-Pfp">
+                    <connections>
+                        <action selector="switchToBackend:" destination="BYZ-38-t0r" id="v5K-tB-kiL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-463" y="455"/>
         </scene>
