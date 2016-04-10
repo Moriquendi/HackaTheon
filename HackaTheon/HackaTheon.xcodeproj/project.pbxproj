@@ -33,6 +33,8 @@
 		90D851F41CB9ACE20089E151 /* KaraokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D851F31CB9ACE20089E151 /* KaraokeViewController.swift */; };
 		90D852281CB9B04F0089E151 /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D852231CB9AF810089E151 /* LTMorphingLabel.framework */; };
 		90D852291CB9B04F0089E151 /* LTMorphingLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90D852231CB9AF810089E151 /* LTMorphingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		90D8522E1CB9C1E50089E151 /* Chord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D8522D1CB9C1E50089E151 /* Chord.swift */; };
+		90D852301CB9CEF40089E151 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D8522F1CB9CEF40089E151 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +124,8 @@
 		90D851F11CB9A75C0089E151 /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SongTableViewCell.swift; path = Code/Views/Cells/SongTableViewCell.swift; sourceTree = "<group>"; };
 		90D851F31CB9ACE20089E151 /* KaraokeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KaraokeViewController.swift; path = Code/Controllers/KaraokeViewController.swift; sourceTree = "<group>"; };
 		90D8521A1CB9AF810089E151 /* LTMorphingLabelDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LTMorphingLabelDemo.xcodeproj; path = Vendor/LTMorphingLabel/LTMorphingLabel/LTMorphingLabelDemo.xcodeproj; sourceTree = SOURCE_ROOT; };
+		90D8522D1CB9C1E50089E151 /* Chord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chord.swift; path = Code/Model/Chord.swift; sourceTree = "<group>"; };
+		90D8522F1CB9CEF40089E151 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D852301CB9CEF40089E151 /* AVFoundation.framework in Frameworks */,
 				90D852281CB9B04F0089E151 /* LTMorphingLabel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +144,7 @@
 		90946F2E1CB9103700DB2D14 = {
 			isa = PBXGroup;
 			children = (
+				90D8522F1CB9CEF40089E151 /* AVFoundation.framework */,
 				90946F391CB9103700DB2D14 /* HackaTheon */,
 				90946F381CB9103700DB2D14 /* Products */,
 			);
@@ -185,6 +191,7 @@
 				90946F4F1CB927B400DB2D14 /* Song.swift */,
 				90946F531CB927CE00DB2D14 /* List.swift */,
 				90946F551CB927E500DB2D14 /* Group.swift */,
+				90D8522D1CB9C1E50089E151 /* Chord.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -389,6 +396,7 @@
 			files = (
 				90946F501CB927B400DB2D14 /* Song.swift in Sources */,
 				90946F431CB9103700DB2D14 /* HackaTheon.xcdatamodeld in Sources */,
+				90D8522E1CB9C1E50089E151 /* Chord.swift in Sources */,
 				90D851F41CB9ACE20089E151 /* KaraokeViewController.swift in Sources */,
 				90D851E41CB9714D0089E151 /* DSFacialGesturesDetector.m in Sources */,
 				90946F5B1CB92B2800DB2D14 /* ListCollectionViewCell.swift in Sources */,

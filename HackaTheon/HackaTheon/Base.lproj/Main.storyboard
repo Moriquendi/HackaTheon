@@ -287,37 +287,19 @@ Nieba i ziemie Twórca jest zamkniony...</string>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noteIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2pZ-xc-xMg">
-                                                    <rect key="frame" x="564" y="31" width="28" height="28"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="28" id="Bjn-s2-vJ0"/>
-                                                        <constraint firstAttribute="width" secondItem="2pZ-xc-xMg" secondAttribute="height" multiplier="1:1" id="OXi-TP-kmX"/>
-                                                        <constraint firstAttribute="height" constant="20" id="liV-1Q-6T5"/>
-                                                    </constraints>
-                                                    <variation key="default">
-                                                        <mask key="constraints">
-                                                            <exclude reference="liV-1Q-6T5"/>
-                                                        </mask>
-                                                    </variation>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="2pZ-xc-xMg" secondAttribute="trailing" id="4Mq-Ag-LUO"/>
                                                 <constraint firstItem="Raf-WU-K6q" firstAttribute="leading" secondItem="X2v-vb-kNI" secondAttribute="leading" id="6tv-HU-Joo"/>
-                                                <constraint firstItem="2pZ-xc-xMg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Raf-WU-K6q" secondAttribute="trailing" id="7aM-JW-LXj"/>
-                                                <constraint firstItem="2pZ-xc-xMg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Raf-WU-K6q" secondAttribute="trailing" id="93l-Dg-ze4"/>
                                                 <constraint firstItem="Raf-WU-K6q" firstAttribute="top" secondItem="X2v-vb-kNI" secondAttribute="bottom" constant="8" id="Eke-q1-wrW"/>
                                                 <constraint firstItem="X2v-vb-kNI" firstAttribute="leading" secondItem="e0S-6G-aOb" secondAttribute="leading" constant="20" id="Sss-8f-uem"/>
                                                 <constraint firstItem="X2v-vb-kNI" firstAttribute="leading" secondItem="e0S-6G-aOb" secondAttribute="leading" id="Uyf-n0-PTh"/>
                                                 <constraint firstItem="X2v-vb-kNI" firstAttribute="top" secondItem="e0S-6G-aOb" secondAttribute="topMargin" id="WWg-ay-4SQ"/>
-                                                <constraint firstItem="2pZ-xc-xMg" firstAttribute="centerY" secondItem="e0S-6G-aOb" secondAttribute="centerY" id="giO-Fz-kyR"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Raf-WU-K6q" secondAttribute="trailing" id="nNb-ic-hrf"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
                                                     <exclude reference="Uyf-n0-PTh"/>
                                                     <exclude reference="nNb-ic-hrf"/>
-                                                    <exclude reference="7aM-JW-LXj"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -505,41 +487,44 @@ K Tobie wołają.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UdW-jd-Ert" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="fyu-Mw-gME">
-                    <rect key="frame" x="0.0" y="0.0" width="340" height="100"/>
+                    <rect key="frame" x="0.0" y="0.0" width="340" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYH-Xy-tTD">
-                            <rect key="frame" x="78" y="8" width="50" height="50"/>
-                            <state key="normal" title="Show Notes" image="noteIcon"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYH-Xy-tTD">
+                            <rect key="frame" x="52" y="6" width="94" height="48"/>
+                            <state key="normal" image="noteIcon"/>
                             <connections>
                                 <segue destination="prd-DH-qtL" kind="show" id="NDA-DA-cDC"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRV-AY-pb6">
-                            <rect key="frame" x="8" y="8" width="50" height="50"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRV-AY-pb6">
+                            <rect key="frame" x="8" y="8" width="44" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="XRV-AY-pb6" secondAttribute="height" multiplier="1:1" id="SSN-wY-VWP"/>
-                                <constraint firstAttribute="width" constant="50" id="Vu8-BK-cg5"/>
+                                <constraint firstAttribute="width" constant="44" id="Vu8-BK-cg5"/>
                             </constraints>
-                            <state key="normal" title="Show Cords" image="noteIcon"/>
+                            <state key="normal" title="Show Cords" image="chordIcon"/>
                             <connections>
                                 <segue destination="FIf-WV-ONF" kind="show" id="4fR-xi-UwY"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byo-hR-kT5">
-                            <rect key="frame" x="213" y="18" width="32" height="30"/>
-                            <state key="normal" title="Auto"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="247" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byo-hR-kT5">
+                            <rect key="frame" x="194" y="6" width="90" height="48"/>
+                            <state key="normal" image="faceIcon"/>
                             <connections>
                                 <action selector="didTapToggleFaceGestures:" destination="AjB-EF-AlI" eventType="touchUpInside" id="Fwm-RJ-aAJ"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bC-Cp-KSp">
-                            <rect key="frame" x="148" y="8" width="50" height="50"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bC-Cp-KSp">
+                            <rect key="frame" x="146" y="6" width="48" height="48"/>
                             <state key="normal" image="playIcon"/>
+                            <connections>
+                                <action selector="playSong:" destination="AjB-EF-AlI" eventType="touchUpInside" id="mu5-7t-sRZ"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ra-mT-oJN">
-                            <rect key="frame" x="259" y="18" width="46" height="30"/>
-                            <state key="normal" title="Button"/>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ra-mT-oJN">
+                            <rect key="frame" x="284" y="6" width="48" height="48"/>
+                            <state key="normal" image="karaokeIcon"/>
                             <connections>
                                 <segue destination="vxC-NQ-afk" kind="presentation" id="7Wn-no-FxV"/>
                             </connections>
@@ -547,11 +532,13 @@ K Tobie wołają.</string>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="3bC-Cp-KSp" firstAttribute="centerX" secondItem="fyu-Mw-gME" secondAttribute="centerX" id="2Hq-Cd-RAD"/>
                         <constraint firstItem="3bC-Cp-KSp" firstAttribute="centerY" secondItem="AYH-Xy-tTD" secondAttribute="centerY" id="7mL-lz-DWN"/>
                         <constraint firstItem="AYH-Xy-tTD" firstAttribute="leading" secondItem="XRV-AY-pb6" secondAttribute="leading" id="8h0-BA-1ds"/>
                         <constraint firstItem="3bC-Cp-KSp" firstAttribute="height" secondItem="AYH-Xy-tTD" secondAttribute="height" id="9cx-hq-gQd"/>
                         <constraint firstItem="3bC-Cp-KSp" firstAttribute="centerY" secondItem="AYH-Xy-tTD" secondAttribute="centerY" id="D5u-yT-GBn"/>
-                        <constraint firstItem="6Ra-mT-oJN" firstAttribute="leading" secondItem="byo-hR-kT5" secondAttribute="trailing" constant="14" id="Hin-2f-E3z"/>
+                        <constraint firstItem="6Ra-mT-oJN" firstAttribute="leading" secondItem="byo-hR-kT5" secondAttribute="trailing" id="DCH-bL-HQL"/>
+                        <constraint firstItem="6Ra-mT-oJN" firstAttribute="leading" secondItem="byo-hR-kT5" secondAttribute="trailing" constant="20" id="Hin-2f-E3z"/>
                         <constraint firstItem="AYH-Xy-tTD" firstAttribute="height" secondItem="XRV-AY-pb6" secondAttribute="height" id="P4K-CT-gZM"/>
                         <constraint firstItem="3bC-Cp-KSp" firstAttribute="leading" secondItem="AYH-Xy-tTD" secondAttribute="trailing" constant="20" id="QnZ-UR-B24"/>
                         <constraint firstItem="AYH-Xy-tTD" firstAttribute="leading" secondItem="XRV-AY-pb6" secondAttribute="trailing" constant="20" id="R6N-vy-Maz"/>
@@ -559,25 +546,37 @@ K Tobie wołają.</string>
                         <constraint firstItem="byo-hR-kT5" firstAttribute="centerY" secondItem="3bC-Cp-KSp" secondAttribute="centerY" id="SmJ-U5-Kqh"/>
                         <constraint firstItem="3bC-Cp-KSp" firstAttribute="height" secondItem="AYH-Xy-tTD" secondAttribute="height" id="Zto-I9-Gnc"/>
                         <constraint firstItem="3bC-Cp-KSp" firstAttribute="width" secondItem="AYH-Xy-tTD" secondAttribute="width" id="eNh-sg-y6k"/>
+                        <constraint firstAttribute="trailingMargin" secondItem="6Ra-mT-oJN" secondAttribute="trailing" id="hUq-0F-fXg"/>
                         <constraint firstItem="AYH-Xy-tTD" firstAttribute="width" secondItem="XRV-AY-pb6" secondAttribute="width" id="iTB-7h-bLD"/>
+                        <constraint firstItem="3bC-Cp-KSp" firstAttribute="leading" secondItem="AYH-Xy-tTD" secondAttribute="trailing" id="kgW-eG-9wS"/>
                         <constraint firstItem="6Ra-mT-oJN" firstAttribute="centerY" secondItem="byo-hR-kT5" secondAttribute="centerY" id="nSU-zL-TSd"/>
                         <constraint firstItem="XRV-AY-pb6" firstAttribute="top" secondItem="fyu-Mw-gME" secondAttribute="topMargin" id="o8j-fi-pAU"/>
                         <constraint firstItem="AYH-Xy-tTD" firstAttribute="centerY" secondItem="XRV-AY-pb6" secondAttribute="centerY" id="pSD-CH-AuA"/>
-                        <constraint firstItem="byo-hR-kT5" firstAttribute="leading" secondItem="3bC-Cp-KSp" secondAttribute="trailing" constant="15" id="pcG-ah-rgA"/>
+                        <constraint firstItem="byo-hR-kT5" firstAttribute="leading" secondItem="3bC-Cp-KSp" secondAttribute="trailing" constant="20" id="pcG-ah-rgA"/>
                         <constraint firstItem="AYH-Xy-tTD" firstAttribute="top" secondItem="XRV-AY-pb6" secondAttribute="bottom" constant="8" symbolic="YES" id="pdj-8A-lmX"/>
+                        <constraint firstItem="AYH-Xy-tTD" firstAttribute="leading" secondItem="XRV-AY-pb6" secondAttribute="trailing" id="sN4-a5-CIB"/>
                         <constraint firstItem="3bC-Cp-KSp" firstAttribute="width" secondItem="AYH-Xy-tTD" secondAttribute="width" id="t7g-XG-sa8"/>
                         <constraint firstAttribute="leadingMargin" secondItem="XRV-AY-pb6" secondAttribute="leading" id="vFW-1x-MvM"/>
+                        <constraint firstItem="byo-hR-kT5" firstAttribute="leading" secondItem="3bC-Cp-KSp" secondAttribute="trailing" id="xPc-MA-SiW"/>
                         <constraint firstItem="3bC-Cp-KSp" firstAttribute="top" secondItem="AYH-Xy-tTD" secondAttribute="bottom" constant="8" symbolic="YES" id="zjH-zC-ptt"/>
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="8h0-BA-1ds"/>
+                            <exclude reference="P4K-CT-gZM"/>
+                            <exclude reference="R6N-vy-Maz"/>
+                            <exclude reference="iTB-7h-bLD"/>
                             <exclude reference="pdj-8A-lmX"/>
                             <exclude reference="7mL-lz-DWN"/>
+                            <exclude reference="9cx-hq-gQd"/>
+                            <exclude reference="QnZ-UR-B24"/>
                             <exclude reference="SaQ-Zs-Eip"/>
                             <exclude reference="Zto-I9-Gnc"/>
                             <exclude reference="eNh-sg-y6k"/>
+                            <exclude reference="t7g-XG-sa8"/>
                             <exclude reference="zjH-zC-ptt"/>
+                            <exclude reference="pcG-ah-rgA"/>
+                            <exclude reference="Hin-2f-E3z"/>
                         </mask>
                     </variation>
                 </view>
@@ -702,23 +701,22 @@ K Tobie wołają.</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DChord" translatesAutoresizingMaskIntoConstraints="NO" id="OoN-91-1xr">
-                                                    <rect key="frame" x="110" y="8" width="180" height="153"/>
+                                                    <rect key="frame" x="130" y="8" width="180" height="153"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQ8-Nm-kFZ">
-                                                    <rect key="frame" x="300" y="49" width="77" height="72"/>
+                                                    <rect key="frame" x="330" y="49" width="77" height="72"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                                     <color key="textColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ied-GH-rZ1">
-                                                    <rect key="frame" x="542" y="60" width="50" height="50"/>
-                                                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ied-GH-rZ1">
+                                                    <rect key="frame" x="544" y="61" width="48" height="48"/>
                                                     <state key="normal" image="playIcon"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ied-GH-rZ1" firstAttribute="top" secondItem="WCO-Xe-ryI" secondAttribute="topMargin" id="3Ck-8j-dsL"/>
-                                                <constraint firstItem="OoN-91-1xr" firstAttribute="trailing" secondItem="WCO-Xe-ryI" secondAttribute="centerX" constant="-10" id="3Tc-OH-9im"/>
+                                                <constraint firstItem="OoN-91-1xr" firstAttribute="trailing" secondItem="WCO-Xe-ryI" secondAttribute="centerX" constant="10" id="3Tc-OH-9im"/>
                                                 <constraint firstItem="OoN-91-1xr" firstAttribute="width" secondItem="WCO-Xe-ryI" secondAttribute="width" multiplier="0.3" id="74M-Mb-Tf3"/>
                                                 <constraint firstItem="OoN-91-1xr" firstAttribute="top" secondItem="WCO-Xe-ryI" secondAttribute="topMargin" id="7NA-7y-b4Y"/>
                                                 <constraint firstItem="ied-GH-rZ1" firstAttribute="centerY" secondItem="WCO-Xe-ryI" secondAttribute="centerY" id="BSV-MC-4ZI"/>
@@ -727,7 +725,7 @@ K Tobie wołają.</string>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ied-GH-rZ1" secondAttribute="trailing" id="bWZ-eV-tQd"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ied-GH-rZ1" secondAttribute="bottom" id="jTb-a1-lAN"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="OoN-91-1xr" secondAttribute="bottom" id="oXr-bc-1ko"/>
-                                                <constraint firstItem="LQ8-Nm-kFZ" firstAttribute="leading" secondItem="OoN-91-1xr" secondAttribute="trailing" constant="10" id="rrf-cQ-Vo1"/>
+                                                <constraint firstItem="LQ8-Nm-kFZ" firstAttribute="leading" secondItem="OoN-91-1xr" secondAttribute="trailing" constant="20" id="rrf-cQ-Vo1"/>
                                                 <constraint firstItem="LQ8-Nm-kFZ" firstAttribute="centerY" secondItem="WCO-Xe-ryI" secondAttribute="centerY" id="tx6-WB-8H3"/>
                                                 <constraint firstItem="OoN-91-1xr" firstAttribute="leading" secondItem="WCO-Xe-ryI" secondAttribute="leadingMargin" id="wTz-f3-95L"/>
                                             </constraints>
@@ -788,8 +786,11 @@ K Tobie wołają.</string>
     </scenes>
     <resources>
         <image name="DChord" width="94" height="133"/>
+        <image name="chordIcon" width="48" height="48"/>
+        <image name="faceIcon" width="48" height="48"/>
+        <image name="karaokeIcon" width="48" height="48"/>
         <image name="noteIcon" width="48" height="48"/>
-        <image name="playIcon" width="50" height="50"/>
+        <image name="playIcon" width="48" height="48"/>
         <image name="tmpImg" width="889" height="596"/>
         <image name="tmpNuty" width="589" height="858"/>
     </resources>

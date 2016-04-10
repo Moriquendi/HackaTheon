@@ -31,14 +31,14 @@ class KaraokeViewController: UIViewController {
             return true
         })
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(KaraokeViewController.changeText), userInfo: self, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(3.5, target: self, selector: #selector(KaraokeViewController.changeText), userInfo: self, repeats: true)
     }
     
     // MARK: KaraokeViewController
     
     var index = 0
     func changeText() {
-        self.textLabel.text = songTextLines[index % 5]
+        self.textLabel.text = songTextLines[index % songTextLines.count]
         index += 1
     }
 

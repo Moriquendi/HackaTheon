@@ -16,9 +16,6 @@ class ChordTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        playButton.layer.borderColor = self.tintColor.CGColor
-        playButton.layer.borderWidth = 0.5
-        playButton.layer.cornerRadius = playButton.bounds.size.width/2
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
