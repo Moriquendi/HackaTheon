@@ -81,7 +81,7 @@ DSFacialDetectorDelegate {
     
     // MARK: SongViewController
     
-    @IBAction func playSong(sender: AnyObject) {
+    @IBAction func playSong(sender: UIButton) {
         if (player == nil) {
             let URL = NSURL(string: "https://dl.dropboxusercontent.com/u/24532134/tmpSong.mp3")!
             let playerItem = AVPlayerItem(URL: URL)
@@ -90,9 +90,11 @@ DSFacialDetectorDelegate {
         
         if (player?.rate > 0) {
             player?.pause()
+            sender.setImage(UIImage(named: "playIcon"), forState: .Normal)
         }
         else {
             player?.play()
+            sender.setImage(UIImage(named: "pauseIcon"), forState: .Normal)
         }
     }
     
