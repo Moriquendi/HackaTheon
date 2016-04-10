@@ -10,6 +10,11 @@ import UIKit
 
 class Song: NSObject {
 
+    var id: String?
+    
+    var lists: [List] = []
+    var listsIds: Array<String> = []
+    
     var title: String?
     var chords: String?
     var author: String?

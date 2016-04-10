@@ -15,6 +15,7 @@ UIViewControllerTransitioningDelegate {
     
     let SegueListDetails = "kListDetailsSegue"
     var lists: Array<List> = []
+    var session: NSURLSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -38,6 +39,94 @@ UIViewControllerTransitioningDelegate {
         
         let layout = collectionView.collectionViewLayout as! PhoneCardsCollectionViewLayout
         layout.interItemSpace = 30
+        
+        let listEndpoint = "list"
+        let songsEndpoint = "song"
+      
+        self.dataForEndpoint(listEndpoint) { (listData) in
+            if let listData = listData {
+                self.dataForEndpoint(songsEndpoint, completion: { (songsData) in
+                    if let songsData = songsData {
+                        let lists = self.listsFromDict(listData)
+                        
+                        let songsArray = songsData["songs"] as! [[String : AnyObject]]
+                        self.updateRelationships(lists, songsArray: songsArray)
+                        
+                        self.lists = lists
+                        self.collectionView.reloadData()
+                    }
+                })
+            }
+        }
+      
+    }
+    
+    func dataForEndpoint(endpoint: String,
+                         completion: ((Dictionary<String, AnyObject>?) -> Void)?) {
+        let URL = NSURL(string: "http://172.17.17.177:8888/\(endpoint)")!
+        let request = NSMutableURLRequest(URL: URL)
+        request.HTTPMethod = "GET"
+        session.dataTaskWithRequest(request) { (data, response, error) in
+            
+            if let error = error {
+                print("\(error) - \(response)")
+            }
+            else {
+                let obj = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments) as! Dictionary<String, AnyObject>
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    completion?(obj)
+                })
+            }
+            }.resume()
+    }
+    
+    
+    func listsFromDict(dict: Dictionary<String, AnyObject>) -> [List] {
+        var allLists: [List] = []
+        
+        let listsArray = dict["lists"] as! Array<Dictionary<String, AnyObject>>
+        for listInfo in listsArray {
+            let list = List()
+            list.id = listInfo["id"] as? String
+            list.title = listInfo["title"] as? String
+            
+            if let imagePath = listInfo["img_url"] as? String {
+                if let imageURL = NSURL(string: imagePath) {
+                    if let data = NSData(contentsOfURL: imageURL) {
+                        print("\(imageURL)")
+                        list.image = UIImage(data: data)
+                    }
+                }
+            }
+            
+            allLists.append(list)
+        }
+        
+        return allLists
+    }
+    
+    func songsFromDict() {
+        
+    }
+    
+    func updateRelationships(lists: [List], songsArray: [[String : AnyObject]]) {
+        print(songsArray)
+        
+        for songInfo in songsArray {
+            let song = Song()
+            song.title = songInfo["title"] as? String
+            song.id = songInfo["id"] as? String
+            song.text = songInfo["content"] as? String
+            
+            let listId = songInfo["list_id"] as? String
+            for list in lists {
+                if list.id == listId {
+                    song.lists.append(list)
+                    list.songs.append(song)
+                }
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {

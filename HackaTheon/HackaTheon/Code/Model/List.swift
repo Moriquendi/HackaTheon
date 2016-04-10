@@ -10,9 +10,12 @@ import UIKit
 
 class List: NSObject {
     
+    var id: String?
     var title: String?
+    
     var songs: Array<Song> = []
-
+    var songsIds: Array<String> = []
+    
     var image: UIImage?
 
 }
