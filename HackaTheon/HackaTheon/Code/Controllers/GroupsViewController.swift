@@ -36,8 +36,8 @@ class GroupsViewController: UIViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! GroupTableViewCell
         
         let group = self.groups[indexPath.row]
-//        cell.avatarImageView.image = 
-//        cell.nameLabel.text = 
+        cell.avatarImageView.image = group.image
+        cell.nameLabel.text = group.name
         
         return cell
     }

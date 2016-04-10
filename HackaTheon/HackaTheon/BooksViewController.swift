@@ -18,6 +18,7 @@ GroupsPickerDelegate {
     let kGroupsSegue = "kGroupsSegue"
     
     var lists: Array<List> = []
+    var groups: Array<Group> = []
     var session: NSURLSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -45,6 +46,7 @@ GroupsPickerDelegate {
         
         let listEndpoint = "list"
         let songsEndpoint = "song"
+        let groupsEndpoint = "group"
       
         self.dataForEndpoint(listEndpoint) { (listData) in
             if let listData = listData {
@@ -58,10 +60,45 @@ GroupsPickerDelegate {
                         self.lists = lists
                         self.collectionView.reloadData()
                     }
+                    
+                    
+                    print ("======LOAD GROUPS======")
+                    self.dataForEndpoint(groupsEndpoint, completion: { (groupsData) in
+                        if let groupsData = groupsData {
+                            let groupsArray = groupsData["groups"] as! [[String : AnyObject]]
+                            let groups = self.groupsFromDict(groupsArray)
+                            
+                            self.groups = groups
+                        }
+                    })
                 })
             }
         }
-      
+    }
+    
+    func groupsFromDict(groupsArray: [[String : AnyObject]]) -> [Group] {
+        var allGroups: [Group] = []
+        
+        print (groupsArray)
+        
+        for groupInfo in groupsArray {
+            let group = Group()
+            group.id = groupInfo["id"] as? String
+            group.name = groupInfo["title"] as? String
+            
+            if let imagePath = groupInfo["img_url"] as? String {
+                if let imageURL = NSURL(string: imagePath) {
+                    if let data = NSData(contentsOfURL: imageURL) {
+                        print("\(imageURL)")
+                        group.image = UIImage(data: data)
+                    }
+                }
+            }
+            
+            allGroups.append(group)
+        }
+        
+        return allGroups
     }
     
     func dataForEndpoint(endpoint: String,
@@ -189,7 +226,7 @@ GroupsPickerDelegate {
         else if (segue.identifier == kGroupsSegue) {
             let navVC = segue.destinationViewController as! UINavigationController
             let groupsVC = navVC.viewControllers.first as! GroupsViewController
-            groupsVC.groups = [Group(), Group(), Group(),Group()]
+            groupsVC.groups = self.groups
             groupsVC.delegate = self
         }
     }

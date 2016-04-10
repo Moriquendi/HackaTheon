@@ -243,13 +243,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beczkaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="4fI-dp-EIN">
-                                                    <rect key="frame" x="8" y="8" width="63" height="63"/>
+                                                    <rect key="frame" x="13" y="13" width="53" height="53"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="4fI-dp-EIN" secondAttribute="height" multiplier="1:1" id="2rx-G9-KVK"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beczka - Duszpasterstwo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6R-ca-kPZ">
-                                                    <rect key="frame" x="79" y="29" width="196" height="21"/>
+                                                    <rect key="frame" x="86" y="29" width="196" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -257,10 +257,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="K6R-ca-kPZ" firstAttribute="centerY" secondItem="4fI-dp-EIN" secondAttribute="centerY" id="0zj-ia-cCm"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="4fI-dp-EIN" secondAttribute="bottom" id="3Tm-74-eZj"/>
-                                                <constraint firstItem="4fI-dp-EIN" firstAttribute="leading" secondItem="TCF-re-PXM" secondAttribute="leadingMargin" id="aHO-GU-Hi6"/>
-                                                <constraint firstItem="K6R-ca-kPZ" firstAttribute="leading" secondItem="4fI-dp-EIN" secondAttribute="trailing" constant="8" symbolic="YES" id="bVe-uG-KP4"/>
-                                                <constraint firstItem="4fI-dp-EIN" firstAttribute="top" secondItem="TCF-re-PXM" secondAttribute="topMargin" id="hOw-Dq-tEw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4fI-dp-EIN" secondAttribute="bottom" constant="5" id="3Tm-74-eZj"/>
+                                                <constraint firstItem="4fI-dp-EIN" firstAttribute="leading" secondItem="TCF-re-PXM" secondAttribute="leadingMargin" constant="5" id="aHO-GU-Hi6"/>
+                                                <constraint firstItem="K6R-ca-kPZ" firstAttribute="leading" secondItem="4fI-dp-EIN" secondAttribute="trailing" constant="20" id="bVe-uG-KP4"/>
+                                                <constraint firstItem="4fI-dp-EIN" firstAttribute="top" secondItem="TCF-re-PXM" secondAttribute="topMargin" constant="5" id="hOw-Dq-tEw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

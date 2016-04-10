@@ -10,7 +10,10 @@ import UIKit
 
 class Group: NSObject {
 
+    var id: String?
+    
     var name: String?
     var lists: Array<List>?
+    var image: UIImage?
     
 }
